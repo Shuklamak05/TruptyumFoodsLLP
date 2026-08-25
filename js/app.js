@@ -199,29 +199,20 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending Message...';
 
-            fetch('mail.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    service: service,
-                    message: message
-                })
-            })
-            .then(response => response.json())
-            .then(res => {
+            const payload = JSON.stringify({
+                name: name,
+                email: email,
+                phone: phone,
+                service: service,
+                message: message
+            });
+
+            const handleResponse = (res) => {
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalBtnText;
 
                 if (res.status === 'success') {
-                    // Clear Form
                     contactForm.reset();
-
-                    // Success Message
                     formStatus.className = 'form-status success';
                     formStatus.style.color = 'var(--primary-hover)';
                     formStatus.style.backgroundColor = 'rgba(11, 164, 60, 0.1)';
@@ -237,21 +228,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     formStatus.textContent = res.message || 'An error occurred. Please try again.';
                 }
 
-                // Hide status after 6 seconds
                 setTimeout(() => {
                     formStatus.style.display = 'none';
                 }, 6000);
-            })
-            .catch(err => {
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalBtnText;
+            };
 
-                formStatus.className = 'form-status error';
-                formStatus.style.color = '#d32f2f';
-                formStatus.style.backgroundColor = '#ffebee';
-                formStatus.style.border = '1px solid #ffcdd2';
-                formStatus.style.display = 'block';
-                formStatus.textContent = 'Network error. Please check your internet connection and try again.';
+            fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: payload
+            })
+            .then(res => {
+                if (!res.ok) throw new Error('Fallback to mail.php');
+                return res.json();
+            })
+            .then(handleResponse)
+            .catch(() => {
+                // Fallback to mail.php if running on classic PHP host
+                fetch('mail.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: payload
+                })
+                .then(res => res.json())
+                .then(handleResponse)
+                .catch(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+
+                    formStatus.className = 'form-status error';
+                    formStatus.style.color = '#d32f2f';
+                    formStatus.style.backgroundColor = '#ffebee';
+                    formStatus.style.border = '1px solid #ffcdd2';
+                    formStatus.style.display = 'block';
+                    formStatus.textContent = 'Network error. Please check your internet connection and try again.';
+                });
+            });
                 
                 setTimeout(() => {
                     formStatus.style.display = 'none';
