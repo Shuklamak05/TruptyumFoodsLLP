@@ -1,0 +1,49 @@
+/*** cspt-ihbox-style-8 ***/
+.cspt-ihbox-style-8{
+    display: inline-block;
+}
+.cspt-ihbox-style-8 .cspt-element-title{
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    text-transform: capitalize;
+}
+.cspt-ihbox-style-8 .cspt-ihbox-icon-wrapper{
+    font-size: 50px;
+    line-height: 50px;
+    margin-right: 25px;
+    text-align: center;
+    color: var(--cspt-leblix-global-color);
+    transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+.cspt-ihbox-style-8:hover .cspt-ihbox-icon-wrapper{   
+    -webkit-transform: scale(-1) rotate(180deg );
+    -moz-transform: scale(-1) rotate(180deg);
+    -ms-transform: scale(-1) rotate(180deg);
+    -o-transform: scale(-1) rotate(180deg);
+    transform: scale(-1) rotate(180deg);
+    color:var(--cspt-leblix-secondary-color);
+}
+
+/*same style diffn class*/
+.style-eight .cspt-ihbox-style-8 .cspt-element-title {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.style-eight .cspt-ihbox-style-8 .cspt-ihbox-icon-wrapper {
+    font-size: 63px;
+    line-height: 80px;
+}
+
+/*same style diffn class2*/
+.cspt-style-8 .cspt-ihbox-style-8 .cspt-element-title {
+    font-size: 19px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}

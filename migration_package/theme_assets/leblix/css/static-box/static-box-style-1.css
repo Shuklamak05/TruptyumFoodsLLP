@@ -1,0 +1,15 @@
+/* --------------------------------------
+ * Static Box
+ * ---------------------------------------*/
+
+/*=== cspt-static-box-style-1 ===*/
+.cspt-static-box-style-1 .cspt-contentbox {
+    padding: 30px;
+    background-color: var(--cspt-leblix-global-color);
+}
+.cspt-static-box-style-1 .cspt-contentbox h4{
+    color: #fff;
+}
+.cspt-static-box-style-1 .cspt-contentbox .creativesplanet-static-box-desc{
+    color: rgba(255, 255, 255, 0.88);
+}

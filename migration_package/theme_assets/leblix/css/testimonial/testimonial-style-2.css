@@ -1,0 +1,117 @@
+/*=== Testimonial style 2 ===*/
+.cspt-testimonial-style-2 .creativesplanet-box-img{
+    margin-right: 25px;  
+}
+.cspt-testimonial-style-2 .cspt-featured-wrapper{
+    position: relative;
+    width: 102px;
+    height: 102px;
+}
+.cspt-testimonial-style-2 .creativesplanet-author-wrapper{
+    margin-top: 20px;
+}
+.cspt-testimonial-style-2 .creativesplanet-box-title{
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 0; 
+}
+.cspt-testimonial-style-2 .creativesplanet-testimonial-detail{
+    font-size: 14px;
+    line-height: 22px;
+}
+.cspt-testimonial-style-2 blockquote{
+    font-size: 19px;
+    line-height: 31px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.cspt-testimonial-style-2 .creativesplanet-box-desc{
+    margin-top: 30px;
+    padding-bottom: 75px;
+}
+.cspt-testimonial-style-2 .creativesplanet-box-content{
+    position: relative;
+}
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .cspt-testimonial-style-2{
+    margin: 0 80px 0 30px;
+}
+.cspt-testimonial-style-2 .creativesplanet-box-star-ratings{
+    font-size: 16px;
+}
+.cspt-elementor-bg-color-secondary .cspt-testimonial-style-2 blockquote,
+.cspt-elementor-bg-color-secondary .cspt-testimonial-style-2 .creativesplanet-testimonial-detail{
+    color: var(--cspt-leblix-white-color);
+ }
+ .cspt-testimonial-style-2 .creativesplanet-box-star-ratings .cspt-active{
+    color: #ffd200;
+    margin-right: -8px;
+}
+.cspt-testimonial-style-2 .creativesplanet-box-desc:before {
+    position: absolute;
+    font-size: 50px;
+    font-weight: normal;
+    bottom: -5px;
+    font-family: "creativesplanet-base-icons";
+    content: '\e857';
+    line-height: 50px;
+    text-align: center;
+    color:var(--cspt-leblix-global-color);
+}
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav{
+    bottom: 30px !important;
+    top: auto!important;
+} 
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav button.owl-next, 
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav button.owl-prev {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+}
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav .owl-prev {
+    left: 10px;
+}
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav .owl-next {
+    right: -70px;
+}
+
+.cspt-elementor-bg-color-secondary .cspt-testimonial-style-2 .creativesplanet-author-wrapper{
+    border-top-color: rgb(221 221 221 / 17%);
+}
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-stage-outer{
+    margin-left: -30px;
+}
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav button.owl-prev{
+    color: var(--cspt-leblix-white-color);
+    background-color: var(--cspt-leblix-global-color);
+}
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav button.owl-next{
+    color: var(--cspt-leblix-white-color);
+    background-color: var(--cspt-leblix-secondary-color);
+}
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav button:hover.owl-prev,
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav button:hover.owl-next{
+    background-color: var(--cspt-leblix-white-color);
+    color: var(--cspt-leblix-secondary-color);
+}
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav button.owl-next:after,
+.cspt-element-testimonial-style-2.creativesplanet-element-viewtype-carousel .owl-carousel .owl-nav button.owl-prev:after {
+    font-family: "creativesplanet-base-icons";
+    content: '\e81c';
+    font-size: 22px;
+}
+.cspt-testimonial-style-2 .creativesplanet-box-title,
+.cspt-testimonial-style-2 .cspt-featured-wrapper:before{
+    color: var(--cspt-leblix-global-color);
+}
+.cspt-testimonial-style-2 .cspt-featured-wrapper:before{
+    background-color: var(--cspt-leblix-light-bg-color);
+}
+.cspt-element-testimonial-style-2 .cspt-carousel-navs{
+    display: none;
+}
+

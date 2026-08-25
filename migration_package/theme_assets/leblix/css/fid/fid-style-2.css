@@ -1,0 +1,51 @@
+/*=== creativesplanet-ele-fid-style-2 ===*/
+.creativesplanet-ele-fid-style-2 .cspt-circle {    
+    position: relative;
+    text-align: center;
+}
+.creativesplanet-ele-fid-style-2 .cspt-fid-inner{
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: normal;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    -khtml-transform: translateX(0%) translateY(-50%);
+    -moz-transform: translateX(0%) translateY(-50%);
+    -ms-transform: translateX(0%) translateY(-50%);
+    -o-transform: translateX(0%) translateY(-50%);
+    transform: translateX(0%) translateY(-50%);
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+.creativesplanet-ele-fid-style-2 .cspt-fid-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-weight: 400!important;
+    letter-spacing: 0px;
+    margin-top: -1px;
+    color: #666666;
+}
+.creativesplanet-ele-fid-style-2 .cspt-fid-sub{
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 8px;
+}
+.creativesplanet-ele-fid-style-2 .cspt-fid-sub span{
+    color: var(  --cspt-leblix-blackish-color);
+}
+.creativesplanet-ele-fid-style-2 .cspt-fld-contents .cspt-fid-sub sup{
+    left: -7px;
+    font-size: 50%;
+    top: -10px;
+    color: var(  --cspt-leblix-blackish-color);
+}
+.creativesplanet-ele-fid-style-2 .cspt-sbox-icon-wrapper{
+    color: var(--cspt-leblix-blackish-color);
+}

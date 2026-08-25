@@ -1,0 +1,72 @@
+/* Icon Heading Style 1 */
+.cspt-ihbox-style-15 .cspt-element-title,
+.cspt-ihbox-style-15 .cspt-ihbox-icon-wrapper i,
+.cspt-ihbox-style-15{
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.cspt-ihbox-style-15{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 15px;
+}
+.cspt-ihbox-style-15 .cspt-element-heading{
+    font-size: 16px;
+    line-height: 26px; 
+    font-weight: 400;
+    color: var(--cspt-leblix-global-color);
+    margin-bottom: 0;
+}
+.cspt-ihbox-style-15 .cspt-element-title{
+    font-size: 20px;
+    line-height: 30px; 
+    margin-bottom: 0;
+    font-weight: 600;
+    letter-spacing: -0.5px; 
+    margin-top: -5px;    
+    color: var(--cspt-leblix-blackish-color);
+}
+.cspt-ihbox-style-15 .cspt-ihbox-icon-wrapper i{
+    padding-right: 20px;
+    font-size: 35px;
+    line-height: 35px;
+    color: var(--cspt-leblix-global-color);
+}
+.cspt-ihbox-style-15 .cspt-ihbox-icon img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid #000;
+}
+.cspt-vertical-div .elementor-divider__text{
+    background-color: var(--cspt-leblix-secondary-color);
+    height: 38px;
+    width: 38px;
+    line-height: 38px !important;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+}
+.cspt-vertical-div .elementor-divider__text::before,
+.cspt-vertical-div .elementor-divider__text:after{
+    content: '';
+    width: 1px;
+    height: 20px;
+    background-color: var(--cspt-leblix-secondary-color);
+    position: absolute;
+    left: 50%;
+    top: -20px;
+}
+.cspt-vertical-div .elementor-divider__text:after{
+    top: 38px;
+}
+.cspt-vertical-div.elementor-widget-divider--view-line_icon .elementor-divider-separator:after, 
+.cspt-vertical-div.elementor-widget-divider--view-line_icon .elementor-divider-separator:before, 
+.cspt-vertical-div.elementor-widget-divider--view-line_text .elementor-divider-separator:after, 
+.cspt-vertical-div.elementor-widget-divider--view-line_text .elementor-divider-separator:before{
+    display: none;
+}

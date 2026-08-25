@@ -1,0 +1,97 @@
+
+/*=== Testimonial style 3 ===*/
+
+.cspt-testimonial-style-3{
+    padding: 10px 145px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 40px;
+}
+.cspt-testimonial-style-3 .creativesplanet-box-img img{
+    height: 79px;
+    width: 79px!important;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.cspt-testimonial-style-3 .cspt-featured-wrapper:after {
+    position: absolute;
+    content: '"';
+    font-size: 12px;
+    line-height: 32px;
+    top: 20px;
+    margin-left: 20px;
+    color:var(--cspt-leblix-white-color);
+    background: var(--cspt-leblix-global-color);
+    border-radius: 50%;
+    height: 30px;
+    font-family: "creativesplanet-base-icons";
+    content: '\f10e';
+    width: 30px;
+}
+.cspt-testimonial-style-3 .creativesplanet-box-title * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+.cspt-testimonial-style-3 .creativesplanet-box-author{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 0;
+    margin-top:2px;
+}
+.cspt-testimonial-style-3 .creativesplanet-box-star-ratings {
+    margin-bottom: 0;
+}
+.cspt-testimonial-style-3 blockquote{
+    margin: 5px 0 0;
+    border: 0;
+    background: transparent;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 36px;
+    font-weight: 400!important;
+}
+.cspt-testimonial-style-3 .creativesplanet-box-star-ratings i.cspt-active{
+    color: #ffe348;
+    margin: 2px;
+}
+.cspt-element-testimonial-style-3 .cspt-ele-header-area{
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+    margin-bottom: 0;
+    top: 50%;
+    margin-top: -35px;
+    left: 30px;
+}
+.cspt-element-testimonial-style-3 .cspt-ele-header-area .cspt-element-title{
+    font-weight: normal;
+    letter-spacing: 3px;
+    font-size: 15px !important;
+    text-transform: uppercase;
+}
+.cspt-element-testimonial-style-3.creativesplanet-element-viewtype-carousel .owl-carousel .owl-dots{
+    position: absolute;
+    right: 38px;
+    top: 50%;
+    width: 39px;
+    margin-top: -20px;
+}
+
+.cspt-element-testimonial-style-3.creativesplanet-element-viewtype-carousel .owl-carousel button.owl-dot {
+    height: 15px;
+    width: 15px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #cbcbcb;
+}
+.cspt-element-testimonial-style-3.creativesplanet-element-viewtype-carousel .owl-carousel button.owl-dot.active {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-color: var(--cspt-leblix-global-color);
+}
+.cspt-testimonial-style-3 .creativesplanet-box-star-ratings {
+    font-size: 18px; 
+    color: rgb(16 16 16 / 15%);
+}

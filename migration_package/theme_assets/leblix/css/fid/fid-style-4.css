@@ -1,0 +1,32 @@
+/*=== creativesplanet-ele-fid-style-1 ===*/
+
+.creativesplanet-ele-fid-style-4 .cspt-fid-title{
+    font-size: 15px;
+    line-height: 20px;    
+    font-weight: 600;
+    color: var(--cspt-leblix-blackish-color);
+}
+.creativesplanet-ele-fid-style-4 .cspt-fid-inner{
+	font-size: 72px;
+    line-height: 82px;
+    margin-bottom: 0px;
+    color: var(--cspt-leblix-global-color);
+}
+.creativesplanet-ele-fid-style-4 .cspt-fid sup{
+    font-size: 60%;
+}
+.creativesplanet-ele-fid-style-4 .cspt-fld-contents {
+    display: flex;
+}
+.creativesplanet-ele-fid-style-4 .cspt-sbox-icon-wrapper {
+    font-size: 65px;
+    line-height: 78px;
+    color: var(--cspt-leblix-blackish-color);
+}
+.creativesplanet-ele-fid-style-4 .cspt-fld-wrap{
+    padding: 0px 33px 0px;
+}
+.creativesplanet-ele-fid-style-4 .desvy-fid-svg-icon img{
+    width: 75px;
+    height: auto;
+}

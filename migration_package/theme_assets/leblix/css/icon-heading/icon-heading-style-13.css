@@ -1,0 +1,60 @@
+/*** cspt-ihbox-style-11 ***/
+.cspt-ihbox-style-13{
+  text-align: center;
+  padding: 30px 35px 30px 30px;
+  border: 5px solid rgb(255 255 255);
+  background-color: #f2f6fb;
+  box-shadow: 0px 0px 8px 1px rgb(0 0 0 / 9%);
+}
+.cspt-ihbox-style-13 .cspt-ihbox-icon-wrapper{
+  font-size:54px;
+  line-height: 64px;
+  color: var(--cspt-leblix-global-color);
+  transition: all 500ms ease;
+}
+.cspt-ihbox-style-13 .cspt-element-title{
+  font-size:16px;
+  line-height: 24px;  
+  letter-spacing: -0.25px;
+}
+.cspt-ihbox-style-13:hover .cspt-ihbox-icon-wrapper{
+  transform: translateY(-10px);
+}
+.cspt-ihbox-style-13 .cspt-ihbox-btn span{
+  display: none;
+}
+
+.cspt-ihbox-style-13 .cspt-ihbox-btn a{
+  height: 50px;
+  width: 50px; 
+  position: absolute;
+  bottom: -42px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: all .50s ease-in-out;
+  transition: all .50s ease-in-out;
+}
+.cspt-ihbox-style-13:hover .cspt-ihbox-btn a{
+  bottom: -22px;
+  opacity: 1;
+}
+
+.cspt-ihbox-style-13 .cspt-ihbox-btn a:hover::after{
+  background-color: var(--cspt-leblix-secondary-color);
+}
+.cspt-ihbox-style-13 .cspt-ihbox-btn a::after{  
+  font-family: "creativesplanet-base-icons";
+  content: '\e856';
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: var(--cspt-leblix-global-color);
+  color: #fff;
+  font-weight: 500;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}

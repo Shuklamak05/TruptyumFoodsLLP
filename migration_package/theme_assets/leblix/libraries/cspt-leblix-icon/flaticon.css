@@ -1,0 +1,312 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?976930228cfd5b1622b88d53a56eee35") format("truetype"),
+url("./flaticon.woff?976930228cfd5b1622b88d53a56eee35") format("woff"),
+url("./flaticon.woff2?976930228cfd5b1622b88d53a56eee35") format("woff2"),
+url("./flaticon.eot?976930228cfd5b1622b88d53a56eee35#iefix") format("embedded-opentype"),
+url("./flaticon.svg?976930228cfd5b1622b88d53a56eee35#flaticon") format("svg");
+}
+
+i[class^="cspt-leblix-icon-"]:before, 
+i[class*=" cspt-leblix-icon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+}
+
+.cspt-leblix-icon-diploma:before {
+    content: "\f101";
+}
+.cspt-leblix-icon-trophy:before {
+    content: "\f102";
+}
+.cspt-leblix-icon-chemistry:before {
+    content: "\f103";
+}
+.cspt-leblix-icon-medical-laboratory:before {
+    content: "\f104";
+}
+.cspt-leblix-icon-chemistry-1:before {
+    content: "\f105";
+}
+.cspt-leblix-icon-medal:before {
+    content: "\f106";
+}
+.cspt-leblix-icon-microbiology:before {
+    content: "\f107";
+}
+.cspt-leblix-icon-molecule:before {
+    content: "\f108";
+}
+.cspt-leblix-icon-feedback:before {
+    content: "\f109";
+}
+.cspt-leblix-icon-laboratory:before {
+    content: "\f10a";
+}
+.cspt-leblix-icon-gas-mask:before {
+    content: "\f10b";
+}
+.cspt-leblix-icon-bacteria:before {
+    content: "\f10c";
+}
+.cspt-leblix-icon-bacteria-1:before {
+    content: "\f10d";
+}
+.cspt-leblix-icon-experiment:before {
+    content: "\f10e";
+}
+.cspt-leblix-icon-dna:before {
+    content: "\f10f";
+}
+.cspt-leblix-icon-scientist:before {
+    content: "\f110";
+}
+.cspt-leblix-icon-molecule-1:before {
+    content: "\f111";
+}
+.cspt-leblix-icon-medical-mask:before {
+    content: "\f112";
+}
+.cspt-leblix-icon-medicines:before {
+    content: "\f113";
+}
+.cspt-leblix-icon-virus:before {
+    content: "\f114";
+}
+.cspt-leblix-icon-atomic:before {
+    content: "\f115";
+}
+.cspt-leblix-icon-thermometer:before {
+    content: "\f116";
+}
+.cspt-leblix-icon-flask:before {
+    content: "\f117";
+}
+.cspt-leblix-icon-newtons-cradle:before {
+    content: "\f118";
+}
+.cspt-leblix-icon-jigsaw:before {
+    content: "\f119";
+}
+.cspt-leblix-icon-brain:before {
+    content: "\f11a";
+}
+.cspt-leblix-icon-syringe:before {
+    content: "\f11b";
+}
+.cspt-leblix-icon-hydrogen:before {
+    content: "\f11c";
+}
+.cspt-leblix-icon-lungs:before {
+    content: "\f11d";
+}
+.cspt-leblix-icon-sperm:before {
+    content: "\f11e";
+}
+.cspt-leblix-icon-cell:before {
+    content: "\f11f";
+}
+.cspt-leblix-icon-stomach:before {
+    content: "\f120";
+}
+.cspt-leblix-icon-platelet:before {
+    content: "\f121";
+}
+.cspt-leblix-icon-electrocardiogram:before {
+    content: "\f122";
+}
+.cspt-leblix-icon-plant:before {
+    content: "\f123";
+}
+.cspt-leblix-icon-flask-1:before {
+    content: "\f124";
+}
+.cspt-leblix-icon-rocket:before {
+    content: "\f125";
+}
+.cspt-leblix-icon-safety-glasses:before {
+    content: "\f126";
+}
+.cspt-leblix-icon-flasks:before {
+    content: "\f127";
+}
+.cspt-leblix-icon-test-tube:before {
+    content: "\f128";
+}
+.cspt-leblix-icon-light-bulb:before {
+    content: "\f129";
+}
+.cspt-leblix-icon-nutritional-test:before {
+    content: "\f12a";
+}
+.cspt-leblix-icon-apple:before {
+    content: "\f12b";
+}
+.cspt-leblix-icon-u-magnet:before {
+    content: "\f12c";
+}
+.cspt-leblix-icon-temperature:before {
+    content: "\f12d";
+}
+.cspt-leblix-icon-gravity:before {
+    content: "\f12e";
+}
+.cspt-leblix-icon-gender:before {
+    content: "\f12f";
+}
+.cspt-leblix-icon-blackboard:before {
+    content: "\f130";
+}
+.cspt-leblix-icon-syringe-1:before {
+    content: "\f131";
+}
+.cspt-leblix-icon-mouse:before {
+    content: "\f132";
+}
+.cspt-leblix-icon-flasks-1:before {
+    content: "\f133";
+}
+.cspt-leblix-icon-robot:before {
+    content: "\f134";
+}
+.cspt-leblix-icon-planet:before {
+    content: "\f135";
+}
+.cspt-leblix-icon-computer:before {
+    content: "\f136";
+}
+.cspt-leblix-icon-brain-1:before {
+    content: "\f137";
+}
+.cspt-leblix-icon-atom:before {
+    content: "\f138";
+}
+.cspt-leblix-icon-dna-1:before {
+    content: "\f139";
+}
+.cspt-leblix-icon-virus-1:before {
+    content: "\f13a";
+}
+.cspt-leblix-icon-scientist-1:before {
+    content: "\f13b";
+}
+.cspt-leblix-icon-caduceus:before {
+    content: "\f13c";
+}
+.cspt-leblix-icon-world:before {
+    content: "\f13d";
+}
+.cspt-leblix-icon-satellite:before {
+    content: "\f13e";
+}
+.cspt-leblix-icon-beaker:before {
+    content: "\f13f";
+}
+.cspt-leblix-icon-microscope:before {
+    content: "\f140";
+}
+.cspt-leblix-icon-telescope:before {
+    content: "\f141";
+}
+.cspt-leblix-icon-microscope-1:before {
+    content: "\f142";
+}
+.cspt-leblix-icon-nuclear:before {
+    content: "\f143";
+}
+.cspt-leblix-icon-cloning:before {
+    content: "\f144";
+}
+.cspt-leblix-icon-dna-2:before {
+    content: "\f145";
+}
+.cspt-leblix-icon-rocket-launch:before {
+    content: "\f146";
+}
+.cspt-leblix-icon-test-tube-1:before {
+    content: "\f147";
+}
+.cspt-leblix-icon-chemical-reaction:before {
+    content: "\f148";
+}
+.cspt-leblix-icon-reproduction:before {
+    content: "\f149";
+}
+.cspt-leblix-icon-chemistry-2:before {
+    content: "\f14a";
+}
+.cspt-leblix-icon-gas-mask-1:before {
+    content: "\f14b";
+}
+.cspt-leblix-icon-chemistry-3:before {
+    content: "\f14c";
+}
+.cspt-leblix-icon-petri-dish:before {
+    content: "\f14d";
+}
+.cspt-leblix-icon-syringe-2:before {
+    content: "\f14e";
+}
+.cspt-leblix-icon-nuclear-1:before {
+    content: "\f14f";
+}
+.cspt-leblix-icon-rocket-launch-1:before {
+    content: "\f150";
+}
+.cspt-leblix-icon-syringe-3:before {
+    content: "\f151";
+}
+.cspt-leblix-icon-atomic-1:before {
+    content: "\f152";
+}
+.cspt-leblix-icon-beaker-1:before {
+    content: "\f153";
+}
+.cspt-leblix-icon-prism:before {
+    content: "\f154";
+}
+.cspt-leblix-icon-orbit:before {
+    content: "\f155";
+}
+.cspt-leblix-icon-burn:before {
+    content: "\f156";
+}
+.cspt-leblix-icon-thermometer-1:before {
+    content: "\f157";
+}
+.cspt-leblix-icon-bottle:before {
+    content: "\f158";
+}
+.cspt-leblix-icon-bottle-1:before {
+    content: "\f159";
+}
+.cspt-leblix-icon-dna-3:before {
+    content: "\f15a";
+}
+.cspt-leblix-icon-call:before {
+    content: "\f15b";
+}
+.cspt-leblix-icon-location:before {
+    content: "\f15c";
+}
+.cspt-leblix-icon-mail:before {
+    content: "\f15d";
+}
+.cspt-leblix-icon-telephone:before {
+    content: "\f15e";
+}
+.cspt-leblix-icon-chat:before {
+    content: "\f15f";
+}
+.cspt-leblix-icon-send:before {
+    content: "\f160";
+}
+.cspt-leblix-icon-time-call:before {
+    content: "\f161";
+}
+.cspt-leblix-icon-rec:before {
+    content: "\f162";
+}
+.cspt-leblix-icon-comment:before {
+    content: "\f163";
+}

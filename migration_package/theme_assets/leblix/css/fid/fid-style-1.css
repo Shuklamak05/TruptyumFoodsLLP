@@ -1,0 +1,35 @@
+/*=== creativesplanet-ele-fid-style-1 ===*/ 
+.creativesplanet-ele-fid-style-1 .cspt-fid-title{
+    font-size: 15px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: 700;
+    color: var(--cspt-leblix-blackish-color);
+}
+.creativesplanet-ele-fid-style-1 .cspt-fid-inner{
+    font-size: 72px;
+    line-height: 82px;
+    margin-bottom: -7px;
+    margin-top: -15px;
+    font-weight: 600;
+    letter-spacing: -2.5px;
+}
+.creativesplanet-ele-fid-style-1 .cspt-fid-inner{
+	color: var(--cspt-leblix-global-color);
+}
+.creativesplanet-ele-fid-style-1 .cspt-fid-inner sup{
+    font-size: 60%;
+    top: -.7em;
+}
+.creativesplanet-ele-fid-style-1 .cspt-sbox-icon-wrapper{
+    font-size: 50px;
+    line-height: 50px;
+}
+.creativesplanet-ele-fid-style-1{
+    text-align: center;
+    display: inline-block;
+    padding: 0 40px;
+}
+.creativesplanet-ele-fid-style-1 .cspt-sbox-icon-wrapper i{
+    color: var(--cspt-leblix-blackish-color);
+}

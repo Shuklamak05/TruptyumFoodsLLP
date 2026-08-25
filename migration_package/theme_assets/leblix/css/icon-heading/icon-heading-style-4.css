@@ -1,0 +1,63 @@
+/*** cspt-ihbox-style-4 ***/
+.cspt-ihbox-style-4 {
+    padding: 30px 5px 30px 30px;
+    -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.cspt-ihbox-style-4 .cspt-ihbox-box{
+    justify-content: space-between;
+}
+.cspt-ihbox-style-4 .cspt-ihbox-icon-wrapper{
+    font-size: 45px;
+    line-height: 90px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: -20px;
+    background-color:var(--cspt-leblix-white-color);
+    color: var(--cspt-leblix-global-color);
+    box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.09);
+    transition: .3s ease-in-out;
+}
+.cspt-ihbox-style-4 .cspt-element-title{
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    transition: .3s ease-in-out;
+}
+.cspt-ihbox-style-4 .cspt-heading-desc {
+    font-size: 14px;
+    line-height: 24px;
+    height: 1px;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: .3s ease-in-out;
+}
+.elementor-widget-cspt_icon_heading.cspt-ihbox-hover-active .cspt-ihbox-style-4 .cspt-heading-desc{
+    height: 50px;
+    visibility: visible;
+    z-index: 12;
+}
+.elementor-widget-cspt_icon_heading.cspt-ihbox-hover-active .cspt-ihbox-style-4{
+    background-color: var(--cspt-leblix-global-color);
+    color:var(--cspt-leblix-white-color);
+    box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.09);
+}
+.elementor-widget-cspt_icon_heading.cspt-ihbox-hover-active .cspt-ihbox-style-4 .cspt-ihbox-icon-wrapper,
+.elementor-widget-cspt_icon_heading.cspt-ihbox-hover-active .cspt-ihbox-style-4 .cspt-heading-desc,
+.elementor-widget-cspt_icon_heading.cspt-ihbox-hover-active .cspt-ihbox-style-4 .cspt-element-title{
+    color:var(--cspt-leblix-white-color);
+}
+.elementor-widget-cspt_icon_heading.cspt-ihbox-hover-active .cspt-ihbox-style-4 .cspt-ihbox-icon-wrapper{
+    box-shadow:unset;
+    background-color: unset;
+}
+.cspt-icon-box-hover-effect .cspt-middle-image > .elementor-widget-wrap{
+    height: 487px;
+}
+

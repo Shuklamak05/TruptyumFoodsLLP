@@ -1,0 +1,19 @@
+/*** cspt-ihbox-style-6 ***/
+.cspt-ihbox-style-6{
+    display: inline-block;
+}
+.cspt-ihbox-style-6 .cspt-element-title{
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.cspt-ihbox-style-6 .cspt-element-heading{
+    font-size: 18px;
+    font-weight: 400 !important;
+    color: #666666;
+}
+.cspt-ihbox-style-6 .cspt-ihbox-contents{
+    margin-top: -19px;
+    padding-left: 3px;
+}

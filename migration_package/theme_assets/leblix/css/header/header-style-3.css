@@ -1,0 +1,142 @@
+/*=== cspt-header-style-3 ===*/
+.cspt-header-style-3 .cspt-header-overlay {
+	position: absolute;
+	z-index: 9;
+	width: 100%;
+}
+.cspt-header-style-3 .cspt-pre-header-wrapper .cspt-contact-info li{
+	font-size: 14px;
+	font-weight: 500;
+	display: inline-block;
+}
+.cspt-header-style-3 .cspt-pre-header-wrapper .cspt-social-links li {
+	margin-right: 0px;
+	padding: 0 5px;
+}
+.cspt-header-style-3 .cspt-contact-info li i{
+	font-size: 14px;
+	color: var(--cspt-leblix-global-color);
+}
+.cspt-header-style-3 .cspt-pre-header-wrapper .cspt-social-links a {
+	width: 25px;
+	height: 25px;
+	line-height: 23px;
+	font-size: 13px;
+	color: var(--cspt-leblix-white-color);
+}
+.cspt-header-style-3 .cspt-contact-info .cspt-social-links a i{
+	color: var(--cspt-leblix-white-color)!important;
+}
+.cspt-header-style-3 .cspt-contact-info .cspt-social-links a i:hover{
+	color: var(--cspt-leblix-global-color)!important;
+}
+.cspt-header-style-3 .cspt-pre-header-wrapper .cspt-contact-info li:last-child{
+	margin-right: 0px;
+	padding-right: 0px;
+}
+.cspt-header-style-3 .cspt-pre-header-wrapper .cspt-social-links a:hover{
+	color: var(--cspt-leblix-global-color);
+}
+
+@media (max-width: 1200px){
+	.cspt-header-style-3 .cspt-header-overlay > .container,
+	.cspt-header-style-3 .cspt-main-header-area > .container {
+		padding: 0;
+	}
+	.cspt-header-style-3 .cspt-header-content{
+		margin: 0 15px;
+		position: relative;
+	}
+	.cspt-header-style-3 .cspt-header-wrapper.cspt-sticky-on{
+		position: static !important;
+		width: auto !important;
+	}
+	.home .cspt-header-style-3 .cspt-social-links,
+	.cspt-header-style-3:before,
+	.cspt-header-style-3:after,
+	.cspt-header-style-3 .cspt-social-links,
+	.cspt-header-style-3 .cspt-right-box{
+		display: none;
+	}
+	.cspt-header-style-3 .cspt-mobile-search .cspt-header-search-btn a,
+	.cspt-header-style-3 .nav-menu-toggle{
+		color: rgba(var(--cspt-leblix-main-menu-typography-color-rgb), 1);
+	}
+}
+
+@media (min-width: 1201px) {
+	.cspt-header-style-3 .cspt-header-height-wrapper .cspt-main-header-area{
+		border-bottom: 4px solid #eceef3;
+	}
+	.cspt-header-style-3 .cspt-right-box .cspt-header-search-btn{
+		margin-left: 0;
+	}
+	.cspt-header-style-3 .cspt-right-box .cspt-header-button a{
+		background-color: var(--cspt-leblix-global-color);
+	}
+	.cspt-header-style-3 .cspt-right-box {
+		display: flex;
+		align-items: center;
+		margin-right: 20px;
+	}
+	.cspt-header-style-3 .cspt-header-button a{
+		padding: 15px 50px 15px 30px;
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: 700;
+		font-size: 14px;
+		border-radius: 0px;
+		letter-spacing: -0.2px;
+		-webkit-transition: none;
+		transition: none;
+		color: #fff;
+		background-color: var(--cspt-leblix-global-color);
+		-webkit-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+	}
+	.cspt-header-style-3 .cspt-header-button a span{
+		position: relative;
+	}
+	.cspt-header-style-3 .cspt-header-button a span::before {
+		content: "\e854";
+		font-family: "creativesplanet-base-icons";
+		font-size: 12px;
+		line-height: 22px;
+		position: absolute;
+		right: -20px;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		transform: translateY(-50%);
+		font-weight: 600;
+		-webkit-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+	}
+	.cspt-header-style-3 .cspt-header-button a:hover span::before{
+		right: -25px;
+	}
+	.cspt-header-style-3 .cspt-header-button a:hover{
+		color:var(--cspt-leblix-white-color);
+		background-color: var(--cspt-leblix-secondary-color);
+	}
+	.cspt-header-style-3 .cspt-sticky-header .cspt-header-button a:hover{
+		background-color: var(--cspt-leblix-secondary-color);
+		color:var(--cspt-leblix-white-color);
+	}
+	.cspt-header-style-3 .cspt-sticky-header .cspt-header-button a:hover::before{
+		color:var(--cspt-leblix-white-color);
+	}
+	.cspt-header-style-3 .cspt-sticky-on .site-title{
+		height: var(--cspt-leblix-sticky-header-height) !important;
+		line-height: var(--cspt-leblix-sticky-header-height) !important;
+	}
+	.cspt-header-style-3 .site-branding{
+		margin:0 20px;
+		-webkit-transition: all 300ms ease;
+		transition: all 300ms ease;
+	}
+	.cspt-header-style-3 .cspt-navbar div > ul > li > a{
+		margin: 0 18px;
+	}
+}
