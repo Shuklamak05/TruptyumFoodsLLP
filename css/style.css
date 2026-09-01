@@ -1064,6 +1064,10 @@ footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
+.sector-tab-btn * {
+    pointer-events: none;
+}
+
 .sector-tab-btn .tab-icon {
     font-size: 1.15rem;
     transition: transform 0.3s ease;

@@ -407,12 +407,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- 11. SECTORS INTERACTIVE SHOWCASE ---
-document.addEventListener('DOMContentLoaded', () => {
+function initSectorsShowcase() {
     const tabBtns = document.querySelectorAll('.sector-tab-btn');
-    const sectorCards = document.querySelectorAll('.sector-card');
     const spotlightCard = document.getElementById('sector-spotlight');
     
-    if (!spotlightCard) return;
+    if (!spotlightCard || tabBtns.length === 0) return;
 
     const spotlightImg = document.getElementById('spotlight-img');
     const spotlightBadge = document.getElementById('spotlight-badge');
@@ -517,65 +516,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Active State Updates
         tabBtns.forEach(btn => {
-            btn.classList.toggle('active', btn.getAttribute('data-sector') === sectorKey);
+            const btnSector = btn.getAttribute('data-sector');
+            btn.classList.toggle('active', btnSector === sectorKey);
         });
 
-        sectorCards.forEach(card => {
-            card.classList.toggle('active', card.getAttribute('data-sector') === sectorKey);
-        });
-
-        // Smooth transition animation
+        // Transition Animation
         spotlightCard.style.opacity = '0.3';
-        spotlightCard.style.transform = 'translateY(10px)';
+        spotlightCard.style.transform = 'translateY(8px)';
 
         setTimeout(() => {
-            spotlightImg.src = data.image;
-            spotlightImg.alt = data.title;
-            spotlightBadge.textContent = data.badge;
-            spotlightCat.textContent = data.category;
-            spotlightTitle.textContent = data.title;
-            spotlightDesc.textContent = data.desc;
+            if (spotlightImg) {
+                spotlightImg.src = data.image;
+                spotlightImg.alt = data.title;
+            }
+            if (spotlightBadge) spotlightBadge.textContent = data.badge;
+            if (spotlightCat) spotlightCat.textContent = data.category;
+            if (spotlightTitle) spotlightTitle.textContent = data.title;
+            if (spotlightDesc) spotlightDesc.textContent = data.desc;
 
             // Applications Chips
-            spotlightApps.innerHTML = data.apps.map(app => `<span class="chip">${app}</span>`).join('');
+            if (spotlightApps) {
+                spotlightApps.innerHTML = data.apps.map(app => `<span class="chip">${app}</span>`).join('');
+            }
 
             // Metrics
-            metric1.textContent = data.metric1;
-            label1.textContent = data.label1;
-            metric2.textContent = data.metric2;
-            label2.textContent = data.label2;
-            metric3.textContent = data.metric3;
-            label3.textContent = data.label3;
+            if (metric1) metric1.textContent = data.metric1;
+            if (label1) label1.textContent = data.label1;
+            if (metric2) metric2.textContent = data.metric2;
+            if (label2) label2.textContent = data.label2;
+            if (metric3) metric3.textContent = data.metric3;
+            if (label3) label3.textContent = data.label3;
 
             // CTA Button
-            ctaBtn.setAttribute('data-service', data.serviceVal);
-            const spanText = ctaBtn.querySelector('span');
-            if (spanText) spanText.textContent = data.btnText;
+            if (ctaBtn) {
+                ctaBtn.setAttribute('data-service', data.serviceVal);
+                const spanText = ctaBtn.querySelector('span');
+                if (spanText) spanText.textContent = data.btnText;
+            }
 
             spotlightCard.style.opacity = '1';
             spotlightCard.style.transform = 'translateY(0)';
-        }, 180);
+        }, 150);
     }
 
-    // Tab Button Click Handler
+    // Tab Button Click Handler with Event Delegation
     tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const sectorKey = btn.getAttribute('data-sector');
-            updateSectorShowcase(sectorKey);
-        });
-    });
-
-    // Card Click Handler
-    sectorCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const sectorKey = card.getAttribute('data-sector');
-            updateSectorShowcase(sectorKey);
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetBtn = e.target.closest('.sector-tab-btn') || btn;
+            const sectorKey = targetBtn.getAttribute('data-sector');
+            if (sectorKey) {
+                updateSectorShowcase(sectorKey);
+            }
         });
     });
 
     // CTA Button Click pre-fills Contact Form Sector Dropdown
     if (ctaBtn) {
-        ctaBtn.addEventListener('click', (e) => {
+        ctaBtn.addEventListener('click', () => {
             const serviceVal = ctaBtn.getAttribute('data-service');
             const userServiceSelect = document.getElementById('user-service');
             if (userServiceSelect && serviceVal) {
@@ -583,4 +581,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-});
+}
+
+// Guaranteed execution helper for Vercel CDN & script loading
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSectorsShowcase);
+} else {
+    initSectorsShowcase();
+}
