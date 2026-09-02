@@ -407,171 +407,170 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- 11. SECTORS INTERACTIVE SHOWCASE ---
-function initSectorsShowcase() {
+const sectorDetailsData = {
+    fruits: {
+        category: "Fruit Processing & Powders",
+        title: "Freeze-Dried Organic Fruits",
+        desc: "Locking peak flavor, natural moisture, color, and sweetness in organic fruits without any added sugar, oils, or chemical preservatives.",
+        image: "images/fruits.png",
+        badge: "🍓 100% Natural Lock",
+        apps: ["Smoothie Blends", "Breakfast Cereals", "Confectionery", "Infant Nutrition", "Healthy Snack Packs"],
+        metric1: "98%+",
+        label1: "Nutrient Retention",
+        metric2: "0%",
+        label2: "Added Sugar / Additives",
+        metric3: "24 Mo",
+        label3: "Ambient Shelf-Life",
+        serviceVal: "fruits",
+        btnText: "Inquire for Fruits Solutions"
+    },
+    vegetables: {
+        category: "Vegetable Dehydration & Dices",
+        title: "Freeze-Dried Whole Vegetables & Dices",
+        desc: "Preserving natural cellular structure, vivid organic pigments, dietary fiber, and lightning-fast rehydration capabilities upon hot or cold liquid exposure.",
+        image: "images/vegetables.png",
+        badge: "🥦 Instant Rehydration",
+        apps: ["Instant Soups & Broths", "Ready-to-Cook Meal Kits", "Seasoning Blends", "Outdoor Rations", "Industrial Ingredients"],
+        metric1: "100%",
+        label1: "Fiber & Color Preservation",
+        metric2: "<3 Min",
+        label2: "Full Rehydration Time",
+        metric3: "2 Years",
+        label3: "Storage Stability",
+        serviceVal: "vegetables",
+        btnText: "Inquire for Vegetables Solutions"
+    },
+    herbs: {
+        category: "Botanical & Herb Sublimation",
+        title: "Aromatic Botanical & Herb Extracts",
+        desc: "Retaining delicate essential oils, volatile aroma compounds, active bio-nutrients, and deep medicinal potency through low-temperature vacuum sublimations.",
+        image: "images/herbs.png",
+        badge: "🌿 Essential Oils Saved",
+        apps: ["Culinary Herb Blends", "Botanical Teas & Infusions", "Wellness Formulations", "Cosmetic Extracts", "Ayurvedic Potency"],
+        metric1: "95%+",
+        label1: "Essential Oils Saved",
+        metric2: "High",
+        label2: "Aroma & Flavor Intensity",
+        metric3: "100%",
+        label3: "Pure Botanical Integrity",
+        serviceVal: "herbs",
+        btnText: "Inquire for Herbs Solutions"
+    },
+    'readyto-eat': {
+        category: "Prepared Meal Sublimation",
+        title: "Instant Gourmet Ready-To-Eat Meals",
+        desc: "Ultra-convenient instant gourmet culinary solutions engineered for rapid preparation, zero chemical preservatives, and long-term expedition or office storage.",
+        image: "images/readyto-eat.png",
+        badge: "🍛 Zero Preservatives",
+        apps: ["Gourmet Rice & Curry Kits", "Defense & Field Rations", "Outdoor Expeditions", "Desk Lunch Solutions", "Travel & Trek Packs"],
+        metric1: "Light",
+        label1: "80% Weight Reduction",
+        metric2: "Instant",
+        label2: "Just Add Water",
+        metric3: "25+ Mo",
+        label3: "No Refrigeration Required",
+        serviceVal: "ready-to-eat",
+        btnText: "Inquire for Ready-to-Eat Solutions"
+    },
+    pharmaceuticals: {
+        category: "Clinical & Biopharma Processing",
+        title: "Biopharma & Clinical Raw Material Sublimation",
+        desc: "Strictly controlled low-temperature lyophilization designed for heat-sensitive active pharmaceutical ingredients, bio-extracts, and clinical raw materials.",
+        image: "images/pharmaceuticals.png",
+        badge: "💊 Ultra-Sterile Standard",
+        apps: ["Nutraceutical Powders", "Biopharma Active Ingredients", "Enzyme & Probiotic Stocks", "Clinical Dietary Supplements", "Controlled Bio-Extracts"],
+        metric1: "CGMP",
+        label1: "Compliant Facility",
+        metric2: "-40°C",
+        label2: "Blast Freeze Precision",
+        metric3: "Sterile",
+        label3: "Strict Quality Control",
+        serviceVal: "pharmaceuticals",
+        btnText: "Inquire for Pharma Solutions"
+    }
+};
+
+window.switchSector = function(sectorKey) {
+    const data = sectorDetailsData[sectorKey];
+    if (!data) return;
+
+    // 1. Synchronously update active state on tab buttons
     const tabBtns = document.querySelectorAll('.sector-tab-btn');
-    const spotlightCard = document.getElementById('sector-spotlight');
-    
-    if (!spotlightCard || tabBtns.length === 0) return;
-
-    const spotlightImg = document.getElementById('spotlight-img');
-    const spotlightBadge = document.getElementById('spotlight-badge');
-    const spotlightCat = document.getElementById('spotlight-category');
-    const spotlightTitle = document.getElementById('spotlight-title');
-    const spotlightDesc = document.getElementById('spotlight-desc');
-    const spotlightApps = document.getElementById('spotlight-apps');
-    const metric1 = document.getElementById('spotlight-metric-1');
-    const label1 = document.getElementById('spotlight-label-1');
-    const metric2 = document.getElementById('spotlight-metric-2');
-    const label2 = document.getElementById('spotlight-label-2');
-    const metric3 = document.getElementById('spotlight-metric-3');
-    const label3 = document.getElementById('spotlight-label-3');
-    const ctaBtn = document.getElementById('spotlight-cta-btn');
-
-    const sectorDetails = {
-        fruits: {
-            category: "Fruit Processing & Powders",
-            title: "Freeze-Dried Organic Fruits",
-            desc: "Locking peak flavor, natural moisture, color, and sweetness in organic fruits without any added sugar, oils, or chemical preservatives.",
-            image: "images/fruits.png",
-            badge: "🍓 100% Natural Lock",
-            apps: ["Smoothie Blends", "Breakfast Cereals", "Confectionery", "Infant Nutrition", "Healthy Snack Packs"],
-            metric1: "98%+",
-            label1: "Nutrient Retention",
-            metric2: "0%",
-            label2: "Added Sugar / Additives",
-            metric3: "24 Mo",
-            label3: "Ambient Shelf-Life",
-            serviceVal: "fruits",
-            btnText: "Inquire for Fruits Solutions"
-        },
-        vegetables: {
-            category: "Vegetable Dehydration & Dices",
-            title: "Freeze-Dried Whole Vegetables & Dices",
-            desc: "Preserving natural cellular structure, vivid organic pigments, dietary fiber, and lightning-fast rehydration capabilities upon hot or cold liquid exposure.",
-            image: "images/vegetables.png",
-            badge: "🥦 Instant Rehydration",
-            apps: ["Instant Soups & Broths", "Ready-to-Cook Meal Kits", "Seasoning Blends", "Outdoor Rations", "Industrial Ingredients"],
-            metric1: "100%",
-            label1: "Fiber & Color Preservation",
-            metric2: "<3 Min",
-            label2: "Full Rehydration Time",
-            metric3: "2 Years",
-            label3: "Storage Stability",
-            serviceVal: "vegetables",
-            btnText: "Inquire for Vegetables Solutions"
-        },
-        herbs: {
-            category: "Botanical & Herb Sublimation",
-            title: "Aromatic Botanical & Herb Extracts",
-            desc: "Retaining delicate essential oils, volatile aroma compounds, active bio-nutrients, and deep medicinal potency through low-temperature vacuum sublimations.",
-            image: "images/herbs.png",
-            badge: "🌿 Essential Oils Saved",
-            apps: ["Culinary Herb Blends", "Botanical Teas & Infusions", "Wellness Formulations", "Cosmetic Extracts", "Ayurvedic Potency"],
-            metric1: "95%+",
-            label1: "Essential Oils Saved",
-            metric2: "High",
-            label2: "Aroma & Flavor Intensity",
-            metric3: "100%",
-            label3: "Pure Botanical Integrity",
-            serviceVal: "herbs",
-            btnText: "Inquire for Herbs Solutions"
-        },
-        'readyto-eat': {
-            category: "Prepared Meal Sublimation",
-            title: "Instant Gourmet Ready-To-Eat Meals",
-            desc: "Ultra-convenient instant gourmet culinary solutions engineered for rapid preparation, zero chemical preservatives, and long-term expedition or office storage.",
-            image: "images/readyto-eat.png",
-            badge: "🍛 Zero Preservatives",
-            apps: ["Gourmet Rice & Curry Kits", "Defense & Field Rations", "Outdoor Expeditions", "Desk Lunch Solutions", "Travel & Trek Packs"],
-            metric1: "Light",
-            label1: "80% Weight Reduction",
-            metric2: "Instant",
-            label2: "Just Add Water",
-            metric3: "25+ Mo",
-            label3: "No Refrigeration Required",
-            serviceVal: "ready-to-eat",
-            btnText: "Inquire for Ready-to-Eat Solutions"
-        },
-        pharmaceuticals: {
-            category: "Clinical & Biopharma Processing",
-            title: "Biopharma & Clinical Raw Material Sublimation",
-            desc: "Strictly controlled low-temperature lyophilization designed for heat-sensitive active pharmaceutical ingredients, bio-extracts, and clinical raw materials.",
-            image: "images/pharmaceuticals.png",
-            badge: "💊 Ultra-Sterile Standard",
-            apps: ["Nutraceutical Powders", "Biopharma Active Ingredients", "Enzyme & Probiotic Stocks", "Clinical Dietary Supplements", "Controlled Bio-Extracts"],
-            metric1: "CGMP",
-            label1: "Compliant Facility",
-            metric2: "-40°C",
-            label2: "Blast Freeze Precision",
-            metric3: "Sterile",
-            label3: "Strict Quality Control",
-            serviceVal: "pharmaceuticals",
-            btnText: "Inquire for Pharma Solutions"
+    tabBtns.forEach(btn => {
+        const key = btn.getAttribute('data-sector');
+        if (key === sectorKey) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
         }
-    };
+    });
 
-    function updateSectorShowcase(sectorKey) {
-        const data = sectorDetails[sectorKey];
-        if (!data) return;
-
-        // Active State Updates
-        tabBtns.forEach(btn => {
-            const btnSector = btn.getAttribute('data-sector');
-            btn.classList.toggle('active', btnSector === sectorKey);
-        });
-
-        // Transition Animation
+    // 2. Animate and update spotlight content
+    const spotlightCard = document.getElementById('sector-spotlight');
+    if (spotlightCard) {
         spotlightCard.style.opacity = '0.3';
-        spotlightCard.style.transform = 'translateY(8px)';
-
-        setTimeout(() => {
-            if (spotlightImg) {
-                spotlightImg.src = data.image;
-                spotlightImg.alt = data.title;
-            }
-            if (spotlightBadge) spotlightBadge.textContent = data.badge;
-            if (spotlightCat) spotlightCat.textContent = data.category;
-            if (spotlightTitle) spotlightTitle.textContent = data.title;
-            if (spotlightDesc) spotlightDesc.textContent = data.desc;
-
-            // Applications Chips
-            if (spotlightApps) {
-                spotlightApps.innerHTML = data.apps.map(app => `<span class="chip">${app}</span>`).join('');
-            }
-
-            // Metrics
-            if (metric1) metric1.textContent = data.metric1;
-            if (label1) label1.textContent = data.label1;
-            if (metric2) metric2.textContent = data.metric2;
-            if (label2) label2.textContent = data.label2;
-            if (metric3) metric3.textContent = data.metric3;
-            if (label3) label3.textContent = data.label3;
-
-            // CTA Button
-            if (ctaBtn) {
-                ctaBtn.setAttribute('data-service', data.serviceVal);
-                const spanText = ctaBtn.querySelector('span');
-                if (spanText) spanText.textContent = data.btnText;
-            }
-
-            spotlightCard.style.opacity = '1';
-            spotlightCard.style.transform = 'translateY(0)';
-        }, 150);
+        spotlightCard.style.transform = 'translateY(6px)';
     }
 
-    // Tab Button Click Handler with Event Delegation
+    setTimeout(() => {
+        const spotlightImg = document.getElementById('spotlight-img');
+        const spotlightBadge = document.getElementById('spotlight-badge');
+        const spotlightCat = document.getElementById('spotlight-category');
+        const spotlightTitle = document.getElementById('spotlight-title');
+        const spotlightDesc = document.getElementById('spotlight-desc');
+        const spotlightApps = document.getElementById('spotlight-apps');
+        const metric1 = document.getElementById('spotlight-metric-1');
+        const label1 = document.getElementById('spotlight-label-1');
+        const metric2 = document.getElementById('spotlight-metric-2');
+        const label2 = document.getElementById('spotlight-label-2');
+        const metric3 = document.getElementById('spotlight-metric-3');
+        const label3 = document.getElementById('spotlight-label-3');
+        const ctaBtn = document.getElementById('spotlight-cta-btn');
+
+        if (spotlightImg) { spotlightImg.src = data.image; spotlightImg.alt = data.title; }
+        if (spotlightBadge) spotlightBadge.textContent = data.badge;
+        if (spotlightCat) spotlightCat.textContent = data.category;
+        if (spotlightTitle) spotlightTitle.textContent = data.title;
+        if (spotlightDesc) spotlightDesc.textContent = data.desc;
+        if (spotlightApps) {
+            spotlightApps.innerHTML = data.apps.map(app => `<span class="chip">${app}</span>`).join('');
+        }
+
+        if (metric1) metric1.textContent = data.metric1;
+        if (label1) label1.textContent = data.label1;
+        if (metric2) metric2.textContent = data.metric2;
+        if (label2) label2.textContent = data.label2;
+        if (metric3) metric3.textContent = data.metric3;
+        if (label3) label3.textContent = data.label3;
+
+        if (ctaBtn) {
+            ctaBtn.setAttribute('data-service', data.serviceVal);
+            const spanText = ctaBtn.querySelector('span');
+            if (spanText) spanText.textContent = data.btnText;
+        }
+
+        if (spotlightCard) {
+            spotlightCard.style.opacity = '1';
+            spotlightCard.style.transform = 'translateY(0)';
+        }
+    }, 120);
+};
+
+function initSectorsShowcase() {
+    const tabBtns = document.querySelectorAll('.sector-tab-btn');
+    if (tabBtns.length === 0) return;
+
     tabBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener('click', function(e) {
             e.preventDefault();
-            const targetBtn = e.target.closest('.sector-tab-btn') || btn;
-            const sectorKey = targetBtn.getAttribute('data-sector');
-            if (sectorKey) {
-                updateSectorShowcase(sectorKey);
+            const sectorKey = this.getAttribute('data-sector');
+            if (sectorKey && window.switchSector) {
+                window.switchSector(sectorKey);
             }
         });
     });
 
-    // CTA Button Click pre-fills Contact Form Sector Dropdown
+    const ctaBtn = document.getElementById('spotlight-cta-btn');
     if (ctaBtn) {
         ctaBtn.addEventListener('click', () => {
             const serviceVal = ctaBtn.getAttribute('data-service');
@@ -583,7 +582,6 @@ function initSectorsShowcase() {
     }
 }
 
-// Guaranteed execution helper for Vercel CDN & script loading
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initSectorsShowcase);
 } else {
