@@ -264,11 +264,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     formStatus.textContent = 'Network error. Please check your internet connection and try again.';
                 });
             });
-                
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                }, 6000);
-            });
         });
     }
 });
