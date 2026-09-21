@@ -582,3 +582,28 @@ if (document.readyState === 'loading') {
 } else {
     initSectorsShowcase();
 }
+
+// --- LANGUAGE SELECTOR & AUTO GEO-ROUTING ---
+function initLanguageSelector() {
+    const langSelectors = document.querySelectorAll('.lang-selector');
+    langSelectors.forEach(selector => {
+        const btn = selector.querySelector('.lang-btn');
+        if (!btn) return;
+        
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selector.classList.toggle('active');
+        });
+    });
+
+    document.addEventListener('click', () => {
+        langSelectors.forEach(selector => selector.classList.remove('active'));
+    });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLanguageSelector);
+} else {
+    initLanguageSelector();
+}
+

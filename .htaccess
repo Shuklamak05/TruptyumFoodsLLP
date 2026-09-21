@@ -1,0 +1,49 @@
+# Truptyum Foods LLP - cPanel International SEO & Language Auto-Routing
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Exclude static assets (css, js, images, etc.) and search engine crawlers from auto-redirects
+    RewriteCond %{HTTP_USER_AGENT} (googlebot|bingbot|yandexbot|slurp|duckduckbot|baiduspider) [NC]
+    RewriteRule ^ - [L]
+
+    # Stop redirect loops if already inside a language subfolder
+    RewriteCond %{REQUEST_URI} ^/(de|fr|es|ru|uk|au)/ [NC]
+    RewriteRule ^ - [L]
+
+    # 1. German Visitors -> /de/
+    RewriteCond %{HTTP:Accept-Language} ^de [NC]
+    RewriteRule ^$ /de/ [R=302,L]
+
+    # 2. French Visitors -> /fr/
+    RewriteCond %{HTTP:Accept-Language} ^fr [NC]
+    RewriteRule ^$ /fr/ [R=302,L]
+
+    # 3. Spanish Visitors -> /es/
+    RewriteCond %{HTTP:Accept-Language} ^es [NC]
+    RewriteRule ^$ /es/ [R=302,L]
+
+    # 4. Russian Visitors -> /ru/
+    RewriteCond %{HTTP:Accept-Language} ^ru [NC]
+    RewriteRule ^$ /ru/ [R=302,L]
+
+    # 5. UK Visitors -> /uk/
+    RewriteCond %{HTTP:Accept-Language} ^en-gb [NC]
+    RewriteRule ^$ /uk/ [R=302,L]
+
+    # 6. Australia Visitors -> /au/
+    RewriteCond %{HTTP:Accept-Language} ^en-au [NC]
+    RewriteRule ^$ /au/ [R=302,L]
+</IfModule>
+
+# Browser Caching & Performance Optimization for cPanel
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
