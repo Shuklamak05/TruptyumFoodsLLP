@@ -658,4 +658,19 @@ if (document.readyState === 'loading') {
     initLanguageSelector();
 }
 
+// --- VIDEO STABILIZATION & DAMPING ---
+function initVideoStabilization() {
+    const videos = document.querySelectorAll('.facility-card video, .facility-video-container video');
+    videos.forEach(video => {
+        video.playbackRate = 0.82; // Damps high-frequency handheld jitter into smooth cinematic movement
+    });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initVideoStabilization);
+} else {
+    initVideoStabilization();
+}
+
+
 

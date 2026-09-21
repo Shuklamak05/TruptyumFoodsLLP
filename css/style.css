@@ -789,8 +789,23 @@ header.scrolled .logo img {
     transition: var(--transition);
 }
 
-.facility-card:hover .facility-img {
-    transform: scale(1.05);
+/* Video Shake Damping & Optical Framing Stabilization */
+.facility-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.15); /* Crop edge shake boundaries */
+    filter: contrast(1.03) saturate(1.05);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.facility-card:hover .facility-img,
+.facility-card:hover video {
+    transform: scale(1.08);
 }
 
 .facility-overlay {
