@@ -594,11 +594,62 @@ function initLanguageSelector() {
             e.stopPropagation();
             selector.classList.toggle('active');
         });
+
+        // Store manual language selection in localStorage
+        const langLinks = selector.querySelectorAll('.lang-dropdown a');
+        langLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                const href = this.getAttribute('href') || '';
+                let targetLang = 'en';
+                if (href.includes('/de/') || href.includes('de/')) targetLang = 'de';
+                else if (href.includes('/fr/') || href.includes('fr/')) targetLang = 'fr';
+                else if (href.includes('/es/') || href.includes('es/')) targetLang = 'es';
+                else if (href.includes('/ru/') || href.includes('ru/')) targetLang = 'ru';
+                else if (href.includes('/uk/') || href.includes('uk/')) targetLang = 'uk';
+                else if (href.includes('/au/') || href.includes('au/')) targetLang = 'au';
+                
+                localStorage.setItem('truptyum_user_lang', targetLang);
+            });
+        });
     });
 
     document.addEventListener('click', () => {
         langSelectors.forEach(selector => selector.classList.remove('active'));
     });
+
+    // Auto Geo / Browser Language Redirect (for root pages)
+    autoRouteLanguage();
+}
+
+function autoRouteLanguage() {
+    const path = window.location.pathname;
+    
+    // Do not redirect if already inside a language subfolder or if search engine bot
+    if (path.match(/^\/(de|fr|es|ru|uk|au)(\/|$)/)) return;
+    if (navigator.userAgent.match(/(bot|crawler|spider|slurp|googlebot|yandexbot)/i)) return;
+
+    let targetLang = localStorage.getItem('truptyum_user_lang');
+    if (!targetLang) {
+        const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (userLang.startsWith('de')) targetLang = 'de';
+        else if (userLang.startsWith('fr')) targetLang = 'fr';
+        else if (userLang.startsWith('es')) targetLang = 'es';
+        else if (userLang.startsWith('ru')) targetLang = 'ru';
+        else if (userLang.includes('gb') || userLang.includes('uk')) targetLang = 'uk';
+        else if (userLang.includes('au')) targetLang = 'au';
+    }
+
+    if (targetLang && ['de', 'fr', 'es', 'ru', 'uk', 'au'].includes(targetLang)) {
+        let currentFile = path.split('/').pop();
+        if (!currentFile || currentFile === '') {
+            currentFile = 'index.html';
+        } else if (!currentFile.endsWith('.html')) {
+            currentFile = currentFile + '.html';
+        }
+
+        const targetUrl = `/${targetLang}/${currentFile}`;
+        window.location.replace(targetUrl);
+    }
 }
 
 if (document.readyState === 'loading') {
@@ -606,4 +657,5 @@ if (document.readyState === 'loading') {
 } else {
     initLanguageSelector();
 }
+
 

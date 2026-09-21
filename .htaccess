@@ -13,27 +13,27 @@
 
     # 1. German Visitors -> /de/
     RewriteCond %{HTTP:Accept-Language} ^de [NC]
-    RewriteRule ^$ /de/ [R=302,L]
+    RewriteRule ^(.*)$ /de/$1 [R=302,L]
 
     # 2. French Visitors -> /fr/
     RewriteCond %{HTTP:Accept-Language} ^fr [NC]
-    RewriteRule ^$ /fr/ [R=302,L]
+    RewriteRule ^(.*)$ /fr/$1 [R=302,L]
 
     # 3. Spanish Visitors -> /es/
     RewriteCond %{HTTP:Accept-Language} ^es [NC]
-    RewriteRule ^$ /es/ [R=302,L]
+    RewriteRule ^(.*)$ /es/$1 [R=302,L]
 
     # 4. Russian Visitors -> /ru/
     RewriteCond %{HTTP:Accept-Language} ^ru [NC]
-    RewriteRule ^$ /ru/ [R=302,L]
+    RewriteRule ^(.*)$ /ru/$1 [R=302,L]
 
     # 5. UK Visitors -> /uk/
     RewriteCond %{HTTP:Accept-Language} ^en-gb [NC]
-    RewriteRule ^$ /uk/ [R=302,L]
+    RewriteRule ^(.*)$ /uk/$1 [R=302,L]
 
     # 6. Australia Visitors -> /au/
     RewriteCond %{HTTP:Accept-Language} ^en-au [NC]
-    RewriteRule ^$ /au/ [R=302,L]
+    RewriteRule ^(.*)$ /au/$1 [R=302,L]
 </IfModule>
 
 # Browser Caching & Performance Optimization for cPanel
