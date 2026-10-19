@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+/* Fonts loaded non-blocking in HTML head */
 
 /* --- CUSTOM VARIABLES --- */
 :root {
@@ -510,7 +510,8 @@ header.scrolled .logo img {
     max-width: 650px;
 }
 
-.hero-slide h1 {
+.hero-slide h1,
+.hero-slide h2.hero-title {
     font-size: 4.2rem;
     color: var(--white);
     margin-bottom: 24px;
@@ -543,6 +544,7 @@ header.scrolled .logo img {
 }
 
 .hero-slide.active h1,
+.hero-slide.active h2.hero-title,
 .hero-slide.active p,
 .hero-slide.active .btn-group {
     opacity: 1;

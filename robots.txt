@@ -1,0 +1,7 @@
+# Robots.txt for Truptyum Foods LLP
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /migration_package/
+
+Sitemap: https://truptyumfoods.com/sitemap.xml

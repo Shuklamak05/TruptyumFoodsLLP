@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://truptyumfoods.com/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/uk/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/au/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/de/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/fr/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/es/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/ru/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/about-us.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/about-us.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/uk/about-us.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/about-us.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/au/about-us.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/about-us.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/de/about-us.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/about-us.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/fr/about-us.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/about-us.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/es/about-us.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/about-us.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/ru/about-us.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/about-us.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/about-us.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/freeze-drying.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/freeze-drying.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/uk/freeze-drying.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/freeze-drying.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/au/freeze-drying.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/freeze-drying.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/de/freeze-drying.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/freeze-drying.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/fr/freeze-drying.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/freeze-drying.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/es/freeze-drying.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/freeze-drying.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/ru/freeze-drying.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/freeze-drying.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/freeze-drying.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/white-labeling.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/white-labeling.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/uk/white-labeling.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/white-labeling.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/au/white-labeling.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/white-labeling.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/de/white-labeling.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/white-labeling.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/fr/white-labeling.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/white-labeling.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/es/white-labeling.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/white-labeling.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/ru/white-labeling.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/white-labeling.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/white-labeling.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/customized-product-development.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/customized-product-development.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/uk/customized-product-development.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/customized-product-development.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/au/customized-product-development.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/customized-product-development.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/de/customized-product-development.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/customized-product-development.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/fr/customized-product-development.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/customized-product-development.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/es/customized-product-development.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/customized-product-development.html" />
+  </url>
+  <url>
+    <loc>https://truptyumfoods.com/ru/customized-product-development.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://truptyumfoods.com/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://truptyumfoods.com/uk/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://truptyumfoods.com/au/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="de-de" href="https://truptyumfoods.com/de/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://truptyumfoods.com/fr/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="es-es" href="https://truptyumfoods.com/es/customized-product-development.html" />
+    <xhtml:link rel="alternate" hreflang="ru-ru" href="https://truptyumfoods.com/ru/customized-product-development.html" />
+  </url>
+</urlset>
