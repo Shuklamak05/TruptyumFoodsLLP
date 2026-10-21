@@ -15,17 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Active Link Highlight
         let currentSectionId = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 120;
-            const sectionHeight = section.offsetHeight;
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                currentSectionId = section.getAttribute('id');
-            }
-        });
+        if (window.scrollY < 120) {
+            currentSectionId = 'home';
+        } else if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 80)) {
+            currentSectionId = 'contact';
+        } else {
+            sections.forEach(section => {
+                const id = section.getAttribute('id');
+                if (!id) return;
+                const sectionTop = section.offsetTop - 140;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSectionId = id;
+                }
+            });
+        }
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSectionId}`) {
+            const href = link.getAttribute('href');
+            if (href === `#${currentSectionId}` || href === `index.html#${currentSectionId}`) {
                 link.classList.add('active');
             }
         });
@@ -238,32 +247,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: payload
             })
-            .then(res => {
-                if (!res.ok) throw new Error('Fallback to mail.php');
-                return res.json();
-            })
-            .then(handleResponse)
-            .catch(() => {
-                // Fallback to mail.php if running on classic PHP host
-                fetch('mail.php', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: payload
+                .then(res => {
+                    if (!res.ok) throw new Error('Fallback to mail.php');
+                    return res.json();
                 })
-                .then(res => res.json())
                 .then(handleResponse)
                 .catch(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalBtnText;
+                    // Fallback to mail.php if running on classic PHP host
+                    fetch('mail.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: payload
+                    })
+                        .then(res => res.json())
+                        .then(handleResponse)
+                        .catch(() => {
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = originalBtnText;
 
-                    formStatus.className = 'form-status error';
-                    formStatus.style.color = '#d32f2f';
-                    formStatus.style.backgroundColor = '#ffebee';
-                    formStatus.style.border = '1px solid #ffcdd2';
-                    formStatus.style.display = 'block';
-                    formStatus.textContent = 'Network error. Please check your internet connection and try again.';
+                            formStatus.className = 'form-status error';
+                            formStatus.style.color = '#d32f2f';
+                            formStatus.style.backgroundColor = '#ffebee';
+                            formStatus.style.border = '1px solid #ffcdd2';
+                            formStatus.style.display = 'block';
+                            formStatus.textContent = 'Network error. Please check your internet connection and try again.';
+                        });
                 });
-            });
         });
     }
 });
@@ -366,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (questionBtn) {
             questionBtn.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
-                
+
                 // Close all other items
                 faqItems.forEach(otherItem => {
                     otherItem.classList.remove('active');
@@ -410,11 +419,11 @@ const sectorDetailsData = {
         image: "images/fruits.png",
         badge: "🍓 100% Natural Lock",
         apps: ["Smoothie Blends", "Breakfast Cereals", "Confectionery", "Infant Nutrition", "Healthy Snack Packs"],
-        metric1: "98%+",
+        metric1: "Upto 98%+",
         label1: "Nutrient Retention",
         metric2: "0%",
         label2: "Added Sugar / Additives",
-        metric3: "24 Mo",
+        metric3: "Upto 12-24 Mo",
         label3: "Ambient Shelf-Life",
         serviceVal: "fruits",
         btnText: "Inquire for Fruits Solutions"
@@ -426,11 +435,11 @@ const sectorDetailsData = {
         image: "images/vegetables.png",
         badge: "🥦 Instant Rehydration",
         apps: ["Instant Soups & Broths", "Ready-to-Cook Meal Kits", "Seasoning Blends", "Outdoor Rations", "Industrial Ingredients"],
-        metric1: "100%",
+        metric1: "Upto 100%",
         label1: "Fiber & Color Preservation",
         metric2: "<3 Min",
         label2: "Full Rehydration Time",
-        metric3: "2 Years",
+        metric3: "Upto 2 Years",
         label3: "Storage Stability",
         serviceVal: "vegetables",
         btnText: "Inquire for Vegetables Solutions"
@@ -442,11 +451,11 @@ const sectorDetailsData = {
         image: "images/herbs.png",
         badge: "🌿 Essential Oils Saved",
         apps: ["Culinary Herb Blends", "Botanical Teas & Infusions", "Wellness Formulations", "Cosmetic Extracts", "Ayurvedic Potency"],
-        metric1: "95%+",
+        metric1: "Upto 95%+",
         label1: "Essential Oils Saved",
         metric2: "High",
         label2: "Aroma & Flavor Intensity",
-        metric3: "100%",
+        metric3: "Upto 100%",
         label3: "Pure Botanical Integrity",
         serviceVal: "herbs",
         btnText: "Inquire for Herbs Solutions"
@@ -459,10 +468,10 @@ const sectorDetailsData = {
         badge: "🍛 Zero Preservatives",
         apps: ["Gourmet Rice & Curry Kits", "Defense & Field Rations", "Outdoor Expeditions", "Desk Lunch Solutions", "Travel & Trek Packs"],
         metric1: "Light",
-        label1: "80% Weight Reduction",
+        label1: "Upto 80% Weight Reduction",
         metric2: "Instant",
         label2: "Just Add Water",
-        metric3: "25+ Mo",
+        metric3: "Upto 12-24 Mo",
         label3: "No Refrigeration Required",
         serviceVal: "ready-to-eat",
         btnText: "Inquire for Ready-to-Eat Solutions"
@@ -485,7 +494,7 @@ const sectorDetailsData = {
     }
 };
 
-window.switchSector = function(sectorKey) {
+window.switchSector = function (sectorKey) {
     const data = sectorDetailsData[sectorKey];
     if (!data) return;
 
@@ -556,7 +565,7 @@ function initSectorsShowcase() {
     if (tabBtns.length === 0) return;
 
     tabBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
+        btn.addEventListener('click', function (e) {
             e.preventDefault();
             const sectorKey = this.getAttribute('data-sector');
             if (sectorKey && window.switchSector) {
@@ -589,7 +598,7 @@ function initLanguageSelector() {
     langSelectors.forEach(selector => {
         const btn = selector.querySelector('.lang-btn');
         if (!btn) return;
-        
+
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
             selector.classList.toggle('active');
@@ -598,7 +607,7 @@ function initLanguageSelector() {
         // Store manual language selection in localStorage
         const langLinks = selector.querySelectorAll('.lang-dropdown a');
         langLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 const href = this.getAttribute('href') || '';
                 let targetLang = 'en';
                 if (href.includes('/de/') || href.includes('de/')) targetLang = 'de';
@@ -607,7 +616,7 @@ function initLanguageSelector() {
                 else if (href.includes('/ru/') || href.includes('ru/')) targetLang = 'ru';
                 else if (href.includes('/uk/') || href.includes('uk/')) targetLang = 'uk';
                 else if (href.includes('/au/') || href.includes('au/')) targetLang = 'au';
-                
+
                 localStorage.setItem('truptyum_user_lang', targetLang);
             });
         });
@@ -623,7 +632,7 @@ function initLanguageSelector() {
 
 function autoRouteLanguage() {
     const path = window.location.pathname;
-    
+
     // Do not redirect if already inside a language subfolder or if search engine bot
     if (path.match(/^\/(de|fr|es|ru|uk|au)(\/|$)/)) return;
     if (navigator.userAgent.match(/(bot|crawler|spider|slurp|googlebot|yandexbot)/i)) return;

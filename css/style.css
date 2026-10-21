@@ -44,6 +44,12 @@ html {
     overflow-x: hidden !important;
 }
 
+section[id],
+header[id],
+div[id] {
+    scroll-margin-top: 100px;
+}
+
 body {
     font-family: var(--font-body);
     background-color: var(--white);
