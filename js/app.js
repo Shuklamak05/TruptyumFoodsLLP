@@ -509,60 +509,60 @@ window.switchSector = function (sectorKey) {
         }
     });
 
-    // 2. Animate and update spotlight content
-    const spotlightCard = document.getElementById('sector-spotlight');
-    if (spotlightCard) {
-        spotlightCard.style.opacity = '0.3';
-        spotlightCard.style.transform = 'translateY(6px)';
+    // 2. Instant content and image update (zero lag)
+    const spotlightImg = document.getElementById('spotlight-img');
+    const spotlightBadge = document.getElementById('spotlight-badge');
+    const spotlightCat = document.getElementById('spotlight-category');
+    const spotlightTitle = document.getElementById('spotlight-title');
+    const spotlightDesc = document.getElementById('spotlight-desc');
+    const spotlightApps = document.getElementById('spotlight-apps');
+    const metric1 = document.getElementById('spotlight-metric-1');
+    const label1 = document.getElementById('spotlight-label-1');
+    const metric2 = document.getElementById('spotlight-metric-2');
+    const label2 = document.getElementById('spotlight-label-2');
+    const metric3 = document.getElementById('spotlight-metric-3');
+    const label3 = document.getElementById('spotlight-label-3');
+    const ctaBtn = document.getElementById('spotlight-cta-btn');
+
+    if (spotlightImg) {
+        const isSubdir = window.location.pathname.match(/\/(de|fr|es|ru|uk|au)(\/|$)/);
+        const prefix = isSubdir ? '../' : '';
+        spotlightImg.src = prefix + data.image;
+        spotlightImg.alt = data.title;
+    }
+    if (spotlightBadge) spotlightBadge.textContent = data.badge;
+    if (spotlightCat) spotlightCat.textContent = data.category;
+    if (spotlightTitle) spotlightTitle.textContent = data.title;
+    if (spotlightDesc) spotlightDesc.textContent = data.desc;
+    if (spotlightApps) {
+        spotlightApps.innerHTML = data.apps.map(app => `<span class="chip">${app}</span>`).join('');
     }
 
-    setTimeout(() => {
-        const spotlightImg = document.getElementById('spotlight-img');
-        const spotlightBadge = document.getElementById('spotlight-badge');
-        const spotlightCat = document.getElementById('spotlight-category');
-        const spotlightTitle = document.getElementById('spotlight-title');
-        const spotlightDesc = document.getElementById('spotlight-desc');
-        const spotlightApps = document.getElementById('spotlight-apps');
-        const metric1 = document.getElementById('spotlight-metric-1');
-        const label1 = document.getElementById('spotlight-label-1');
-        const metric2 = document.getElementById('spotlight-metric-2');
-        const label2 = document.getElementById('spotlight-label-2');
-        const metric3 = document.getElementById('spotlight-metric-3');
-        const label3 = document.getElementById('spotlight-label-3');
-        const ctaBtn = document.getElementById('spotlight-cta-btn');
+    if (metric1) metric1.textContent = data.metric1;
+    if (label1) label1.textContent = data.label1;
+    if (metric2) metric2.textContent = data.metric2;
+    if (label2) label2.textContent = data.label2;
+    if (metric3) metric3.textContent = data.metric3;
+    if (label3) label3.textContent = data.label3;
 
-        if (spotlightImg) { spotlightImg.src = data.image; spotlightImg.alt = data.title; }
-        if (spotlightBadge) spotlightBadge.textContent = data.badge;
-        if (spotlightCat) spotlightCat.textContent = data.category;
-        if (spotlightTitle) spotlightTitle.textContent = data.title;
-        if (spotlightDesc) spotlightDesc.textContent = data.desc;
-        if (spotlightApps) {
-            spotlightApps.innerHTML = data.apps.map(app => `<span class="chip">${app}</span>`).join('');
-        }
-
-        if (metric1) metric1.textContent = data.metric1;
-        if (label1) label1.textContent = data.label1;
-        if (metric2) metric2.textContent = data.metric2;
-        if (label2) label2.textContent = data.label2;
-        if (metric3) metric3.textContent = data.metric3;
-        if (label3) label3.textContent = data.label3;
-
-        if (ctaBtn) {
-            ctaBtn.setAttribute('data-service', data.serviceVal);
-            const spanText = ctaBtn.querySelector('span');
-            if (spanText) spanText.textContent = data.btnText;
-        }
-
-        if (spotlightCard) {
-            spotlightCard.style.opacity = '1';
-            spotlightCard.style.transform = 'translateY(0)';
-        }
-    }, 120);
+    if (ctaBtn) {
+        ctaBtn.setAttribute('data-service', data.serviceVal);
+        const spanText = ctaBtn.querySelector('span');
+        if (spanText) spanText.textContent = data.btnText;
+    }
 };
 
 function initSectorsShowcase() {
     const tabBtns = document.querySelectorAll('.sector-tab-btn');
     if (tabBtns.length === 0) return;
+
+    // Preload all sector images into browser memory immediately
+    const isSubdir = window.location.pathname.match(/\/(de|fr|es|ru|uk|au)(\/|$)/);
+    const prefix = isSubdir ? '../' : '';
+    Object.values(sectorDetailsData).forEach(sector => {
+        const preload = new Image();
+        preload.src = prefix + sector.image;
+    });
 
     tabBtns.forEach(btn => {
         btn.addEventListener('click', function (e) {
