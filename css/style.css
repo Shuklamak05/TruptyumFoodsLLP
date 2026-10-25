@@ -792,8 +792,15 @@ header.scrolled .logo img {
     background: #eef4f0;
 }
 
+.card-media-inner picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .organic-media-card img,
-.card-media-inner img {
+.card-media-inner img,
+.card-media-inner picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1345,13 +1352,14 @@ footer {
 /* Spotlight Card */
 .sectors-spotlight-card {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 50px;
+    grid-template-columns: 1fr 1.15fr;
+    align-items: stretch;
+    gap: 48px;
     background: var(--white);
-    border: 1px solid rgba(11, 164, 60, 0.12);
+    border: 1px solid rgba(11, 164, 60, 0.14);
     border-radius: var(--radius-lg);
-    padding: 48px;
-    box-shadow: 0 20px 60px rgba(11, 164, 60, 0.07);
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(11, 164, 60, 0.08);
     margin-bottom: 0;
     position: relative;
     overflow: hidden;
@@ -1371,49 +1379,70 @@ footer {
 
 .spotlight-visual {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .spotlight-img-frame {
     position: relative;
     width: 100%;
-    max-width: 380px;
-    height: 360px;
+    height: 100%;
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-md);
-    background: radial-gradient(circle at center, rgba(11, 164, 60, 0.06) 0%, rgba(247, 156, 0, 0.03) 70%, transparent 100%);
-    border: 1px dashed rgba(11, 164, 60, 0.2);
-    padding: 30px;
+    background: #0f1712;
+    border: 1px solid rgba(11, 164, 60, 0.18);
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.spotlight-img-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .spotlight-img-frame img {
-    max-height: 240px;
-    width: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.12));
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sectors-spotlight-card:hover .spotlight-img-frame img {
-    transform: scale(1.06) translateY(-6px);
+    transform: scale(1.05);
 }
 
 .spotlight-badge {
     position: absolute;
-    bottom: -15px;
-    background: var(--dark);
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: rgba(18, 22, 25, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     color: var(--white);
     font-size: 0.85rem;
     font-weight: 700;
-    padding: 8px 18px;
+    padding: 8px 20px;
     border-radius: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
     letter-spacing: 0.02em;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    white-space: nowrap;
 }
 
 /* Spotlight Content */
@@ -1686,8 +1715,10 @@ footer {
         gap: 30px;
     }
     .spotlight-img-frame {
+        width: 100%;
         max-width: 100%;
-        height: 280px;
+        height: 320px;
+        min-height: 320px;
     }
     .sectors-creative-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1697,6 +1728,15 @@ footer {
 @media (max-width: 600px) {
     .sectors-spotlight-card {
         padding: 24px 20px;
+    }
+    .spotlight-img-frame {
+        height: 250px;
+        min-height: 250px;
+    }
+    .spotlight-badge {
+        bottom: 14px;
+        font-size: 0.78rem;
+        padding: 6px 14px;
     }
     .spotlight-title {
         font-size: 1.65rem;
