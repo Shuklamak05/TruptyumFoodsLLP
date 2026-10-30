@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.forEach(link => {
             link.classList.remove('active');
             const href = link.getAttribute('href');
-            if (href === `#${currentSectionId}` || href === `index.html#${currentSectionId}`) {
+            if (href === `#${currentSectionId}` || href === `index.html#${currentSectionId}` ||
+                (currentSectionId === 'sectors' && (href === '#applications' || href === 'index.html#applications'))) {
                 link.classList.add('active');
             }
         });
