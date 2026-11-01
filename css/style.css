@@ -53,6 +53,12 @@ div[id] {
 body {
     font-family: var(--font-body);
     background-color: var(--white);
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)),
+        url('../images/scattered-fruits-seamless.webp');
+    background-repeat: repeat;
+    background-size: 1150px auto;
+    background-attachment: fixed;
     color: var(--text-main);
     line-height: 1.62;
     overflow-x: hidden !important;
@@ -109,8 +115,31 @@ section {
 
 .section-header {
     text-align: center;
-    max-width: 720px;
+    max-width: 760px;
     margin: 0 auto 70px;
+}
+
+.content-grid-section .section-header,
+.sectors .section-header,
+.stats-grid-section .section-header,
+.certifications .section-header,
+.faq-section .section-header {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 24px 34px;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.skew-section-blue .section-header {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
 }
 
 .section-subtitle {
@@ -649,7 +678,7 @@ header.scrolled .logo img {
 
 /* --- ALTERNATING GRID PANELS (About, Services, CPTs) --- */
 .content-grid-section {
-    background-color: var(--light);
+    background-color: transparent;
 }
 
 .alternating-row {
@@ -693,6 +722,16 @@ header.scrolled .logo img {
 
 .alternating-row:nth-child(even) .row-media {
     order: 2;
+}
+
+.row-content {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 38px 42px;
+    border-radius: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 16px 40px rgba(19, 34, 25, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .row-content h3 {
@@ -1030,7 +1069,7 @@ header.scrolled .logo img {
 
 /* --- FACTS & FIGURES STATS grid --- */
 .stats-grid-section {
-    background-color: var(--light);
+    background-color: transparent;
 }
 
 .stats-grid {
@@ -1075,7 +1114,7 @@ header.scrolled .logo img {
 
 /* --- CERTIFICATIONS SECTION (Replaces Clients) --- */
 .certifications {
-    background: linear-gradient(180deg, var(--white) 0%, #f8fafc 100%);
+    background: transparent;
     padding: 70px 0 75px;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
@@ -1156,7 +1195,7 @@ header.scrolled .logo img {
 
 /* --- CONTACT SECTION --- */
 .contact {
-    background-color: var(--light);
+    background-color: transparent;
 }
 
 .contact-wrapper {
@@ -1376,7 +1415,7 @@ footer {
 /* --- SECTORS OF APPLICATION SHOWCASE --- */
 .sectors {
     padding: 120px 0;
-    background: linear-gradient(180deg, #f8fbf9 0%, #ffffff 50%, #f4f9f5 100%);
+    background: transparent;
     position: relative;
     overflow: hidden;
 }
@@ -1904,7 +1943,7 @@ footer {
 /* --- FAQ ACCORDION --- */
 .faq-section {
     padding: 120px 0;
-    background-color: var(--white);
+    background-color: transparent;
 }
 
 .faq-container {
@@ -1918,7 +1957,8 @@ footer {
 .faq-item {
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    background-color: var(--light);
+    background-color: var(--white);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
     overflow: hidden;
     transition: var(--transition);
 }
@@ -2297,5 +2337,20 @@ footer {
     }
     .whatsapp-float .wa-tooltip {
         display: none;
+    }
+}
+
+/* --- INNER LAYOUT SECTIONS TRANSPARENCY --- */
+.ab-layout-section,
+.cd-layout-section,
+.fd-layout-section,
+.wl-layout-section {
+    background-color: transparent !important;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: 650px auto;
+        background-attachment: scroll;
     }
 }
