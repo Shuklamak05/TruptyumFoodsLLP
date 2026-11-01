@@ -1365,8 +1365,9 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.06);
     padding-top: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 0.92rem;
     flex-wrap: wrap;
     gap: 20px;
