@@ -953,6 +953,81 @@ header.scrolled .logo img {
     font-weight: 800;
 }
 
+/* --- Our Plant Mobile Expand/Collapse --- */
+.facility-expand-wrapper {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .facility-expand-wrapper {
+        display: block;
+    }
+
+    .facility-gallery {
+        margin-top: 25px;
+        gap: 20px;
+    }
+
+    .facility-gallery:not(.is-expanded) .facility-card:not(:first-child) {
+        display: none !important;
+    }
+
+    .facility-gallery.is-expanded .facility-card:not(:first-child) {
+        display: block !important;
+        animation: facilityCardFadeIn 0.35s ease forwards;
+    }
+
+    .facility-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 28px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        border-radius: 50px;
+        background: #ffffff;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+        box-shadow: 0 4px 18px rgba(11, 164, 60, 0.12);
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .facility-toggle-btn:hover,
+    .facility-toggle-btn:active {
+        background: var(--primary);
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(11, 164, 60, 0.22);
+    }
+
+    .facility-toggle-btn .chevron-icon {
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .facility-gallery.is-expanded + .facility-expand-wrapper .chevron-icon {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes facilityCardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* --- FACTS & FIGURES STATS grid --- */
 .stats-grid-section {
     background-color: var(--light);
@@ -1824,125 +1899,6 @@ footer {
     }
 }
 
-/* --- PREMIUM TESTIMONIALS SECTION --- */
-.testimonials {
-    padding: 120px 0;
-    background-color: var(--light);
-    position: relative;
-    overflow: hidden;
-}
-
-.testimonials::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.testimonials .container {
-    position: relative;
-    z-index: 2;
-}
-
-.testimonial-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.testimonial-card-premium {
-    background-color: var(--white);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 40px 35px;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.testimonial-card-premium::before {
-    content: "“";
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    font-size: 5rem;
-    line-height: 1;
-    font-family: serif;
-    color: var(--primary-light);
-    opacity: 0.8;
-    pointer-events: none;
-}
-
-.testimonial-card-premium:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(11, 164, 60, 0.08);
-    border-color: rgba(11, 164, 60, 0.2);
-}
-
-.testimonial-stars-premium {
-    color: var(--accent);
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-.testimonial-text-premium {
-    font-size: 1.02rem;
-    line-height: 1.7;
-    color: var(--text-main);
-    margin-bottom: 30px;
-    font-style: italic;
-    position: relative;
-    z-index: 2;
-}
-
-.testimonial-profile {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-top: 1px solid var(--border);
-    padding-top: 20px;
-}
-
-.testimonial-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: var(--primary-light);
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 1.1rem;
-    flex-shrink: 0;
-    border: 2px solid var(--white);
-    box-shadow: var(--shadow-sm);
-}
-
-.testimonial-info h4 {
-    font-size: 1.1rem;
-    color: var(--dark);
-    margin-bottom: 4px;
-    font-weight: 800;
-}
-
-.testimonial-info span {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
 
 /* --- FAQ ACCORDION --- */
 .faq-section {
@@ -2039,10 +1995,7 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .testimonial-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
+
 }
 
 @media (max-width: 768px) {
@@ -2050,9 +2003,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .testimonial-cards-grid {
-        grid-template-columns: 1fr;
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -2226,5 +2177,124 @@ footer {
     .form-group-row {
         grid-template-columns: 1fr;
         gap: 0;
+    }
+}
+
+/* --- FLOATING WHATSAPP BUTTON --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 62px;
+    height: 62px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 4px 12px rgba(0, 0, 0, 0.18);
+    z-index: 999999;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 14px 32px rgba(37, 211, 102, 0.6), 0 6px 16px rgba(0, 0, 0, 0.22);
+    color: #ffffff !important;
+}
+
+.whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: #ffffff;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover svg {
+    transform: rotate(6deg) scale(1.05);
+}
+
+/* Subtle Pulse Glow Animation */
+.whatsapp-float .wa-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #25D366;
+    opacity: 0.65;
+    z-index: -1;
+    animation: wa-pulse-animation 2.2s infinite ease-out;
+}
+
+@keyframes wa-pulse-animation {
+    0% {
+        transform: scale(1);
+        opacity: 0.75;
+    }
+    60% {
+        transform: scale(1.45);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.45);
+        opacity: 0;
+    }
+}
+
+/* Desktop Tooltip Badge */
+.whatsapp-float .wa-tooltip {
+    position: absolute;
+    right: calc(100% + 14px);
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    background: var(--dark, #132219);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-float .wa-tooltip::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--dark, #132219);
+}
+
+.whatsapp-float:hover .wa-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 54px;
+        height: 54px;
+    }
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+    }
+    .whatsapp-float .wa-tooltip {
+        display: none;
     }
 }
