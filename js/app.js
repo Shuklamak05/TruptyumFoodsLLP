@@ -465,15 +465,15 @@ const sectorDetailsData = {
         btnText: "Inquire for Ready-to-Eat Solutions"
     },
     pharmaceuticals: {
-        category: "Clinical & Biopharma Processing",
-        title: "Biopharma & Clinical Raw Material Sublimation",
-        desc: "Strictly controlled low-temperature lyophilization designed for heat-sensitive active pharmaceutical ingredients, bio-extracts, and clinical raw materials.",
+        category: "Pharmaceuticals Processing",
+        title: "Pharmaceuticals Raw Material Sublimation",
+        desc: "Strictly controlled low-temperature lyophilization designed for heat-sensitive active pharmaceutical ingredients, bio-extracts, and pharmaceutical raw materials.",
         image: "images/pharmaceuticals.png",
         badge: "💊 High Purity Standard",
-        apps: ["Nutraceutical Powders", "Biopharma Active Ingredients", "Enzyme & Probiotic Stocks", "Clinical Dietary Supplements", "Controlled Bio-Extracts"],
-        metric1: "CGMP",
+        apps: [],
+        metric1: "Job Work",
         label1: "Compliant Facility",
-        metric2: "-40°C",
+        metric2: "Upto -40°C",
         label2: "Blast Freeze Precision",
         metric3: "High Purity",
         label3: "Strict Quality Control",
@@ -522,8 +522,21 @@ window.switchSector = function (sectorKey) {
     if (spotlightCat) spotlightCat.textContent = data.category;
     if (spotlightTitle) spotlightTitle.textContent = data.title;
     if (spotlightDesc) spotlightDesc.textContent = data.desc;
-    if (spotlightApps) {
-        spotlightApps.innerHTML = data.apps.map(app => `<span class="chip">${app}</span>`).join('');
+    
+    const spotlightFeatureCol = spotlightApps ? spotlightApps.closest('.spotlight-feature-col') : null;
+    if (spotlightFeatureCol) {
+        if (data.apps && data.apps.length > 0) {
+            spotlightFeatureCol.style.display = '';
+            spotlightApps.innerHTML = data.apps.map(app => `<span class="chip">${app}</span>`).join('');
+        } else {
+            spotlightFeatureCol.style.display = 'none';
+        }
+    } else if (spotlightApps) {
+        if (data.apps && data.apps.length > 0) {
+            spotlightApps.innerHTML = data.apps.map(app => `<span class="chip">${app}</span>`).join('');
+        } else {
+            spotlightApps.innerHTML = '';
+        }
     }
 
     if (metric1) metric1.textContent = data.metric1;
