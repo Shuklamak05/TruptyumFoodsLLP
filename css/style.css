@@ -594,6 +594,7 @@ header.scrolled .logo img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 /* Optimize focal point of slides 2 & 3 to showcase products clearly on the right of the text */
@@ -614,8 +615,10 @@ header.scrolled .logo img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(10, 22, 16, 0.6) 0%, rgba(10, 22, 16, 0.35) 40%, rgba(10, 22, 16, 0.05) 70%, transparent 88%);
+    /* Clean, feather-soft neutral gradient strictly behind the text - eliminates murky green tint so fruits pop with full clarity and natural color */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.36) 0%, rgba(0, 0, 0, 0.16) 28%, rgba(0, 0, 0, 0.01) 50%, transparent 62%);
     z-index: 1;
+    pointer-events: none;
 }
 
 .hero-content-wrapper {
@@ -636,7 +639,7 @@ header.scrolled .logo img {
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
     letter-spacing: -0.03em;
     line-height: 1.15;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85), 0 2px 6px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 4px 18px rgba(0, 0, 0, 0.85), 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
 .hero-slide p {
@@ -647,7 +650,7 @@ header.scrolled .logo img {
     transform: translateY(40px);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
     font-weight: 500;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 3px 12px rgba(0, 0, 0, 0.85);
 }
 
 .hero-slide .btn-group {
@@ -2318,7 +2321,7 @@ footer {
     }
 
     .hero-slide::before {
-        background: linear-gradient(to bottom, rgba(10, 22, 16, 0.65) 0%, rgba(10, 22, 16, 0.45) 50%, rgba(10, 22, 16, 0.25) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.18) 50%, rgba(0, 0, 0, 0.02) 100%);
     }
 
     .hero-slide:nth-child(2),
