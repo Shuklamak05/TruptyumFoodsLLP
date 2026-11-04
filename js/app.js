@@ -230,19 +230,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 6000);
             };
 
-            fetch('/api/contact', {
+            // Send inquiry to /mail.php (root path works across all language folders)
+            fetch('/mail.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: payload
             })
                 .then(res => {
-                    if (!res.ok) throw new Error('Fallback to mail.php');
+                    if (!res.ok) throw new Error('Fallback to /api/contact');
                     return res.json();
                 })
                 .then(handleResponse)
                 .catch(() => {
-                    // Fallback to mail.php if running on classic PHP host
-                    fetch('mail.php', {
+                    // Fallback to /api/contact if running on serverless
+                    fetch('/api/contact', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: payload
