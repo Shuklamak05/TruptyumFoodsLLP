@@ -11,6 +11,11 @@
       "src": "/images/favicon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/images/ty_logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ],
   "theme_color": "#0ba43c",
