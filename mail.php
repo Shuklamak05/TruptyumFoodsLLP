@@ -1,4 +1,7 @@
 <?php
+/**
+ * Truptyum Foods - Contact Form Handler with Authenticated cPanel SMTP & Local Lead Logging
+ */
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
@@ -10,18 +13,34 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
-// Get raw post data
+// =========================================================================
+// 1. CONFIGURATION
+// =========================================================================
+// Primary & secondary notification recipients (comma-separated)
+$toRecipients = "sales@truptyumfoods.com, makshukla05@gmail.com";
+
+// cPanel SMTP Credentials
+// Set $useSmtp = true and enter the password you set in cPanel for alerts@truptyumfoods.com
+$useSmtp       = true;
+$smtpHost      = "mail.truptyumfoods.com"; // Or "localhost"
+$smtpPort      = 465;                      // 465 (SSL)
+$smtpSecurity  = "ssl";                    // "ssl"
+$smtpUser      = "alerts@truptyumfoods.com";
+$smtpPass      = "CHANGE_THIS_TO_YOUR_PASSWORD"; // <-- Enter your cPanel email password here
+
+// =========================================================================
+// 2. INPUT VALIDATION & SANITIZATION
+// =========================================================================
 $rawInput = file_get_contents("php://input");
 $data = json_decode($rawInput, true);
 
-// If json_decode failed, fallback to standard POST
 if (json_last_error() !== JSON_ERROR_NONE) {
     $data = $_POST;
 }
 
-$name = isset($data['name']) ? strip_tags(trim($data['name'])) : '';
-$email = isset($data['email']) ? filter_var(trim($data['email']), FILTER_SANITIZE_EMAIL) : '';
-$phone = isset($data['phone']) ? strip_tags(trim($data['phone'])) : '';
+$name    = isset($data['name']) ? strip_tags(trim($data['name'])) : '';
+$email   = isset($data['email']) ? filter_var(trim($data['email']), FILTER_SANITIZE_EMAIL) : '';
+$phone   = isset($data['phone']) ? strip_tags(trim($data['phone'])) : '';
 $service = isset($data['service']) ? strip_tags(trim($data['service'])) : '';
 $message = isset($data['message']) ? strip_tags(trim($data['message'])) : '';
 
@@ -37,34 +56,24 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
-// 1. Secure Local Lead Backup (Ensures you NEVER lose an inquiry even if mail servers delay)
+// =========================================================================
+// 3. SECURE LOCAL LEAD BACKUP (Never lose a single inquiry)
+// =========================================================================
 $leadData = [
     'timestamp' => date('Y-m-d H:i:s T'),
-    'name' => $name,
-    'email' => $email,
-    'phone' => $phone,
-    'service' => $service,
-    'message' => $message,
-    'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
+    'name'      => $name,
+    'email'     => $email,
+    'phone'     => $phone,
+    'service'   => $service,
+    'message'   => $message,
+    'ip'        => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
 ];
 @file_put_contents(__DIR__ . '/inquiries_backup.log', json_encode($leadData) . PHP_EOL, FILE_APPEND | LOCK_EX);
 
-// 2. Recipient email address (You can add multiple comma-separated emails, e.g. "sales@truptyumfoods.com, yourname@gmail.com")
-$to = "sales@truptyumfoods.com";
-
-// Email subject
+// =========================================================================
+// 4. EMAIL CONTENT
+// =========================================================================
 $subject = "New Inquiry from Truptyum Foods: " . $name;
-
-// Email headers with valid From, Reply-To and Return-Path
-// Note: Using inquiry@truptyumfoods.com prevents Google Workspace from flagging the message as internal sender spoofing
-$headers = "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-$headers .= "From: Truptyum Website <inquiry@truptyumfoods.com>\r\n";
-$headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
-$headers .= "Return-Path: inquiry@truptyumfoods.com\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-
-// HTML Email Body
 $emailContent = "
 <html>
 <head>
@@ -88,17 +97,165 @@ $emailContent = "
 </html>
 ";
 
-// Envelope sender (-f) is required on cPanel to prevent mail servers from discarding as unauthenticated
-$additionalParams = "-finquiry@truptyumfoods.com";
+// =========================================================================
+// 5. SIMPLE SMTP CLIENT IMPLEMENTATION
+// =========================================================================
+class SimpleSmtpMailer {
+    private $host;
+    private $port;
+    private $username;
+    private $password;
+    private $security;
+    private $timeout = 15;
+    public  $error   = '';
 
-// Attempt to send email
-$sent = @mail($to, $subject, $emailContent, $headers, $additionalParams);
+    public function __construct($host, $port, $username, $password, $security = 'ssl') {
+        $this->host     = $host;
+        $this->port     = $port;
+        $this->username = $username;
+        $this->password = $password;
+        $this->security = strtolower($security);
+    }
 
-if (!$sent) {
-    // Fallback without 5th parameter if server restricts -f
-    $sent = @mail($to, $subject, $emailContent, $headers);
+    private function getResponse($socket) {
+        $data = '';
+        while ($str = fgets($socket, 515)) {
+            $data .= $str;
+            if (strlen($str) >= 4 && substr($str, 3, 1) === ' ') {
+                break;
+            }
+        }
+        return $data;
+    }
+
+    private function sendCommand($socket, $cmd, $expectedCode) {
+        fputs($socket, $cmd . "\r\n");
+        $response = $this->getResponse($socket);
+        $code = substr($response, 0, 3);
+        if ($code != $expectedCode) {
+            $this->error = "SMTP Command '{$cmd}' failed. Response: {$response}";
+            return false;
+        }
+        return true;
+    }
+
+    public function send($fromEmail, $fromName, $toAddresses, $subject, $htmlBody, $replyToEmail = '', $replyToName = '') {
+        $remoteHost = ($this->security === 'ssl' ? 'ssl://' : '') . $this->host;
+        $context = stream_context_create([
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            ]
+        ]);
+
+        $errno = 0; $errstr = '';
+        $socket = @stream_socket_client($remoteHost . ':' . $this->port, $errno, $errstr, $this->timeout, STREAM_CLIENT_CONNECT, $context);
+        if (!$socket) {
+            $this->error = "Failed to connect to SMTP server: {$errstr} ({$errno})";
+            return false;
+        }
+
+        $welcome = $this->getResponse($socket);
+        if (substr($welcome, 0, 3) !== '220') {
+            $this->error = "Invalid SMTP welcome banner: {$welcome}";
+            fclose($socket);
+            return false;
+        }
+
+        $helloCmd = 'EHLO ' . ($_SERVER['SERVER_NAME'] ?? 'localhost');
+        if (!$this->sendCommand($socket, $helloCmd, 250)) {
+            $this->sendCommand($socket, 'HELO ' . ($_SERVER['SERVER_NAME'] ?? 'localhost'), 250);
+        }
+
+        if (!empty($this->username) && !empty($this->password)) {
+            if (!$this->sendCommand($socket, 'AUTH LOGIN', 334)) {
+                fclose($socket);
+                return false;
+            }
+            if (!$this->sendCommand($socket, base64_encode($this->username), 334)) {
+                fclose($socket);
+                return false;
+            }
+            if (!$this->sendCommand($socket, base64_encode($this->password), 235)) {
+                fclose($socket);
+                return false;
+            }
+        }
+
+        if (!$this->sendCommand($socket, 'MAIL FROM:<' . $fromEmail . '>', 250)) {
+            fclose($socket);
+            return false;
+        }
+
+        $recipients = is_array($toAddresses) ? $toAddresses : array_map('trim', explode(',', $toAddresses));
+        foreach ($recipients as $rcpt) {
+            if (empty($rcpt)) continue;
+            if (!$this->sendCommand($socket, 'RCPT TO:<' . $rcpt . '>', 250)) {
+                fclose($socket);
+                return false;
+            }
+        }
+
+        if (!$this->sendCommand($socket, 'DATA', 354)) {
+            fclose($socket);
+            return false;
+        }
+
+        $headers = "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+        $headers .= "From: {$fromName} <{$fromEmail}>\r\n";
+        $headers .= "To: " . implode(', ', $recipients) . "\r\n";
+        if (!empty($replyToEmail)) {
+            $headers .= "Reply-To: {$replyToName} <{$replyToEmail}>\r\n";
+        }
+        $headers .= "Subject: =?UTF-8?B?" . base64_encode($subject) . "?=\r\n";
+        $headers .= "Date: " . date('r') . "\r\n";
+        $headers .= "X-Mailer: Truptyum-SMTP-Mailer\r\n";
+
+        $messageData = $headers . "\r\n" . preg_replace('/^\./m', '..', $htmlBody) . "\r\n.\r\n";
+        fputs($socket, $messageData);
+
+        $dataResp = $this->getResponse($socket);
+        if (substr($dataResp, 0, 3) !== '250') {
+            $this->error = "DATA submission failed: {$dataResp}";
+            fclose($socket);
+            return false;
+        }
+
+        $this->sendCommand($socket, 'QUIT', 221);
+        fclose($socket);
+        return true;
+    }
 }
 
+// =========================================================================
+// 6. DISPATCH EMAIL (SMTP with fallback to native mail())
+// =========================================================================
+$sent = false;
+
+if ($useSmtp && $smtpPass !== "CHANGE_THIS_TO_YOUR_PASSWORD") {
+    $mailer = new SimpleSmtpMailer($smtpHost, $smtpPort, $smtpUser, $smtpPass, $smtpSecurity);
+    $sent = $mailer->send($smtpUser, "Truptyum Website", $toRecipients, $subject, $emailContent, $email, $name);
+}
+
+// Fallback to PHP mail() if SMTP disabled, password not yet filled, or SMTP failed
+if (!$sent) {
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $headers .= "From: Truptyum Website <inquiry@truptyumfoods.com>\r\n";
+    $headers .= "Reply-To: {$name} <{$email}>\r\n";
+    $headers .= "Return-Path: inquiry@truptyumfoods.com\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+    $params = "-finquiry@truptyumfoods.com";
+
+    $sent = @mail($toRecipients, $subject, $emailContent, $headers, $params);
+    if (!$sent) {
+        $sent = @mail($toRecipients, $subject, $emailContent, $headers);
+    }
+}
+
+// Return JSON response to frontend
 if ($sent) {
     http_response_code(200);
     echo json_encode(["status" => "success", "message" => "Thank you for contacting us. Your message has been sent successfully."]);
