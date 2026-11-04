@@ -49,17 +49,19 @@ $leadData = [
 ];
 @file_put_contents(__DIR__ . '/inquiries_backup.log', json_encode($leadData) . PHP_EOL, FILE_APPEND | LOCK_EX);
 
-// 2. Recipient email address
+// 2. Recipient email address (You can add multiple comma-separated emails, e.g. "sales@truptyumfoods.com, yourname@gmail.com")
 $to = "sales@truptyumfoods.com";
 
 // Email subject
 $subject = "New Inquiry from Truptyum Foods: " . $name;
 
-// Email headers with valid From and Return-Path
+// Email headers with valid From, Reply-To and Return-Path
+// Note: Using inquiry@truptyumfoods.com prevents Google Workspace from flagging the message as internal sender spoofing
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-$headers .= "From: Truptyum Foods <sales@truptyumfoods.com>\r\n";
-$headers .= "Reply-To: $name <$email>\r\n";
+$headers .= "From: Truptyum Website <inquiry@truptyumfoods.com>\r\n";
+$headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
+$headers .= "Return-Path: inquiry@truptyumfoods.com\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
 // HTML Email Body
@@ -87,7 +89,7 @@ $emailContent = "
 ";
 
 // Envelope sender (-f) is required on cPanel to prevent mail servers from discarding as unauthenticated
-$additionalParams = "-fsales@truptyumfoods.com";
+$additionalParams = "-finquiry@truptyumfoods.com";
 
 // Attempt to send email
 $sent = @mail($to, $subject, $emailContent, $headers, $additionalParams);
