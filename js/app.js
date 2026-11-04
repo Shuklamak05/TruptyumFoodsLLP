@@ -176,7 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Simple validation
             const name = document.getElementById('user-name').value.trim();
             const email = document.getElementById('user-email').value.trim();
-            const phone = document.getElementById('user-phone').value.trim();
+            const rawPhone = document.getElementById('user-phone').value.trim();
+            const countryCodeEl = document.getElementById('user-country-code');
+            const countryCode = countryCodeEl ? countryCodeEl.value.trim() : '';
+            const phone = rawPhone ? (countryCode && !rawPhone.startsWith('+') ? `${countryCode} ${rawPhone}` : rawPhone) : '';
             const service = document.getElementById('user-service').value;
             const message = document.getElementById('user-message').value.trim();
 
