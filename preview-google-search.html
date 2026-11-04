@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search Result Preview - Truptyum Foods Logo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #121212;
+            color: #e8eaed;
+            padding: 30px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 700px;
+            width: 100%;
+        }
+        h1 {
+            color: #0ba43c;
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        p.subtitle {
+            text-align: center;
+            color: #9aa0a6;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        .preview-card {
+            background: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+        .preview-card.light {
+            background: #ffffff;
+            color: #202124;
+            border: 1px solid #dadce0;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .badge-dark {
+            background: #2d2d2d;
+            color: #8ab4f8;
+        }
+        .badge-light {
+            background: #e8f0fe;
+            color: #1a73e8;
+        }
+        /* Google Result Snippet Structure */
+        .google-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .google-icon-wrapper {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+        }
+        .google-icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .google-site-info {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.25;
+        }
+        .google-sitename {
+            font-size: 0.88rem;
+            font-weight: 400;
+        }
+        .google-url {
+            font-size: 0.75rem;
+            color: #9aa0a6;
+        }
+        .preview-card.light .google-url {
+            color: #5f6368;
+        }
+        .google-title {
+            color: #8ab4f8;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.35;
+            margin: 6px 0 8px;
+            text-decoration: none;
+            display: block;
+        }
+        .preview-card.light .google-title {
+            color: #1a0dab;
+        }
+        .google-desc {
+            font-size: 0.88rem;
+            line-height: 1.5;
+            color: #bdc1c6;
+            margin: 0 0 14px;
+        }
+        .preview-card.light .google-desc {
+            color: #4d5156;
+        }
+        .google-sitelinks {
+            border-top: 1px solid #3c4043;
+            margin-top: 12px;
+            padding-top: 10px;
+        }
+        .preview-card.light .google-sitelinks {
+            border-top: 1px solid #e8eaed;
+        }
+        .sitelink-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #2d2d2d;
+            color: #8ab4f8;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+        .preview-card.light .sitelink-item {
+            color: #1a0dab;
+            border-bottom: 1px solid #f1f3f4;
+        }
+        .sitelink-item:last-child {
+            border-bottom: none;
+        }
+        .arrow {
+            color: #9aa0a6;
+            font-size: 0.8rem;
+        }
+        /* Comparison Row */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .comp-card {
+            background: #181818;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .comp-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .comp-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .comp-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .comp-desc {
+            font-size: 0.78rem;
+            color: #9aa0a6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Google Search Result Logo Preview</h1>
+    <p class="subtitle">Comparison between the old cropped icon and your complete new high-resolution emblem</p>
+
+    <div class="comparison-grid">
+        <div class="comp-card" style="border-color: #d32f2f;">
+            <div class="comp-icon" style="background: #000;">
+                <img src="images/favicon-32x32.webp" alt="Old Favicon" style="width: 48px; height: 48px; border-radius: 50%; image-rendering: pixelated;">
+            </div>
+            <div class="comp-title" style="color: #ef5350;">Old Icon (Indexed Previously)</div>
+            <div class="comp-desc">Fuzzy 32x32 crop, orange sprout leaf missing, low resolution.</div>
+        </div>
+
+        <div class="comp-card" style="border-color: #0ba43c;">
+            <div class="comp-icon">
+                <img src="images/favicon-192x192.png" alt="New Favicon">
+            </div>
+            <div class="comp-title" style="color: #0ba43c;">New Emblem (Updated)</div>
+            <div class="comp-desc">Crisp white 't', leaf, and full orange sprout branch. Perfectly centered.</div>
+        </div>
+    </div>
+
+    <!-- Dark Mode Mockup (matches user screenshot) -->
+    <div class="preview-card">
+        <span class="badge badge-dark">Google Search (Mobile Dark Mode)</span>
+        <div class="google-header">
+            <div class="google-icon-wrapper">
+                <img src="images/favicon-192x192.png" alt="Truptyum Foods Logo">
+            </div>
+            <div class="google-site-info">
+                <span class="google-sitename">Truptyum Foods</span>
+                <span class="google-url">https://www.truptyumfoods.com</span>
+            </div>
+        </div>
+        <a href="#" class="google-title">Truptyum Foods | Superior Freeze-Dried Goods & Lyophilization</a>
+        <p class="google-desc">TruptYum Foods LLP: Pioneering 100% pure, preservative-free freeze-dried fruits, vegetables, herbs, and nutraceutical products. Advanced lyophilization facilities...</p>
+
+        <div class="google-sitelinks">
+            <a href="#" class="sitelink-item"><span>Contact Us</span><span class="arrow">&rsaquo;</span></a>
+            <a href="#" class="sitelink-item"><span>Freeze-drying / Lyophilization</span><span class="arrow">&rsaquo;</span></a>
+            <a href="#" class="sitelink-item"><span>Customized Product Development</span><span class="arrow">&rsaquo;</span></a>
+            <a href="#" class="sitelink-item"><span>White Labeling Opportunities</span><span class="arrow">&rsaquo;</span></a>
+        </div>
+    </div>
+
+    <!-- Light Mode Mockup -->
+    <div class="preview-card light">
+        <span class="badge badge-light">Google Search (Mobile Light Mode)</span>
+        <div class="google-header">
+            <div class="google-icon-wrapper">
+                <img src="images/favicon-192x192.png" alt="Truptyum Foods Logo">
+            </div>
+            <div class="google-site-info">
+                <span class="google-sitename">Truptyum Foods</span>
+                <span class="google-url">https://www.truptyumfoods.com</span>
+            </div>
+        </div>
+        <a href="#" class="google-title">Truptyum Foods | Superior Freeze-Dried Goods & Lyophilization</a>
+        <p class="google-desc">TruptYum Foods LLP: Pioneering 100% pure, preservative-free freeze-dried fruits, vegetables, herbs, and nutraceutical products. Advanced lyophilization facilities...</p>
+
+        <div class="google-sitelinks">
+            <a href="#" class="sitelink-item"><span>Contact Us</span><span class="arrow">&rsaquo;</span></a>
+            <a href="#" class="sitelink-item"><span>Freeze-drying / Lyophilization</span><span class="arrow">&rsaquo;</span></a>
+            <a href="#" class="sitelink-item"><span>Customized Product Development</span><span class="arrow">&rsaquo;</span></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
