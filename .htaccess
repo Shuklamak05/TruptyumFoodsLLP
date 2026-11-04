@@ -77,3 +77,8 @@
     Header set X-Frame-Options "SAMEORIGIN"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
+# 5. Protect sensitive log and backup files
+<FilesMatch "\.(log|json)$">
+    Require all denied
+</FilesMatch>

@@ -37,17 +37,30 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
-// Recipient email address
+// 1. Secure Local Lead Backup (Ensures you NEVER lose an inquiry even if mail servers delay)
+$leadData = [
+    'timestamp' => date('Y-m-d H:i:s T'),
+    'name' => $name,
+    'email' => $email,
+    'phone' => $phone,
+    'service' => $service,
+    'message' => $message,
+    'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
+];
+@file_put_contents(__DIR__ . '/inquiries_backup.log', json_encode($leadData) . PHP_EOL, FILE_APPEND | LOCK_EX);
+
+// 2. Recipient email address
 $to = "sales@truptyumfoods.com";
 
 // Email subject
 $subject = "New Inquiry from Truptyum Foods: " . $name;
 
-// Email headers
+// Email headers with valid From and Return-Path
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-$headers .= "From: Truptyum Foods Web <no-reply@truptyumfoods.com>\r\n";
+$headers .= "From: Truptyum Foods <sales@truptyumfoods.com>\r\n";
 $headers .= "Reply-To: $name <$email>\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
 // HTML Email Body
 $emailContent = "
@@ -59,22 +72,32 @@ $emailContent = "
     <div style='max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;'>
         <h2 style='color: #0ba43c; border-bottom: 2px solid #0ba43c; padding-bottom: 10px;'>New Web Inquiry</h2>
         <p><strong>Name:</strong> {$name}</p>
-        <p><strong>Email:</strong> {$email}</p>
-        <p><strong>Phone:</strong> " . (!empty($phone) ? $phone : "Not specified") . "</p>
+        <p><strong>Email:</strong> <a href='mailto:{$email}'>{$email}</a></p>
+        <p><strong>Phone:</strong> " . (!empty($phone) ? "<a href='tel:{$phone}'>{$phone}</a>" : "Not specified") . "</p>
         <p><strong>Inquiry Sector:</strong> " . ucwords(str_replace('-', ' ', $service)) . "</p>
         <p><strong>Message:</strong></p>
         <div style='background-color: #fff; padding: 15px; border-left: 4px solid #0ba43c; border-radius: 4px;'>
             " . nl2br($message) . "
         </div>
         <hr style='border: 0; border-top: 1px solid #ddd; margin-top: 30px;' />
-        <p style='font-size: 0.8rem; color: #888;'>This mail was sent automatically from the Truptyum Foods website contact form backend service.</p>
+        <p style='font-size: 0.8rem; color: #888;'>Sent automatically from the Truptyum Foods website contact form.</p>
     </div>
 </body>
 </html>
 ";
 
+// Envelope sender (-f) is required on cPanel to prevent mail servers from discarding as unauthenticated
+$additionalParams = "-fsales@truptyumfoods.com";
+
 // Attempt to send email
-if (mail($to, $subject, $emailContent, $headers)) {
+$sent = @mail($to, $subject, $emailContent, $headers, $additionalParams);
+
+if (!$sent) {
+    // Fallback without 5th parameter if server restricts -f
+    $sent = @mail($to, $subject, $emailContent, $headers);
+}
+
+if ($sent) {
     http_response_code(200);
     echo json_encode(["status" => "success", "message" => "Thank you for contacting us. Your message has been sent successfully."]);
 } else {
