@@ -1474,9 +1474,9 @@ header.scrolled .logo img {
     z-index: 1;
 }
 
-/* Reduce Inquiry sector input by half */
+/* Align Inquiry sector input box with Email and Detailed Message boxes */
 #user-service {
-    width: 50%;
+    width: 100%;
 }
 
 .contact-form button[type="submit"] {
