@@ -8,7 +8,7 @@ ini_set('display_errors', 1);
 
 require_once __DIR__ . '/mail.php'; // Load SimpleSmtpMailer
 
-$recipient = isset($_GET['to']) ? trim($_GET['to']) : 'sales@truptyumfoods.com, makshukla05@gmail.com';
+$recipient = isset($_GET['to']) ? trim($_GET['to']) : 'sales@truptyumfoods.com';
 $sendTest  = isset($_GET['send']) && $_GET['send'] === '1';
 $mode      = isset($_GET['mode']) ? $_GET['mode'] : 'native'; // 'smtp' or 'native'
 $testPass  = isset($_GET['pass']) ? trim($_GET['pass']) : '';

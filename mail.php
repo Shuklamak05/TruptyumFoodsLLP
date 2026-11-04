@@ -16,8 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 // =========================================================================
 // 1. CONFIGURATION
 // =========================================================================
-// Primary & secondary notification recipients (comma-separated)
-$toRecipients = "sales@truptyumfoods.com, makshukla05@gmail.com";
+// Primary notification recipient
+$toRecipients = "sales@truptyumfoods.com";
 
 // cPanel SMTP Credentials
 // Set $useSmtp = true and enter the password you set in cPanel for alerts@truptyumfoods.com
